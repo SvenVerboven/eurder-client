@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "eurder-client"
+    }
+  },
+  "defaultProject": "eurder-client",
+  "cli": {
+    "analytics": "3fe8b129-d492-4c61-9a9d-7d2893421f03"
+  }
 }
