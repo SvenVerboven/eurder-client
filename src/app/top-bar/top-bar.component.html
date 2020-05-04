@@ -1,16 +1,25 @@
 <div class="toolbar">
   <img alt="Order logo" src="../../assets/order.png"/>
-  <nav class="navigation">
-    <ul>
-      <li>
-        <a routerLink="/items" title="items">items</a>
-      </li>
-      <li>
-        <a routerLink="/users" title="users">users</a>
-      </li>
-      <li>
-        <a routerLink="/orders" title="orders">orders</a>
-      </li>
-    </ul>
+  <nav>
+    <div class="dropdown">
+      <button class="dropbtn">items</button>
+      <div class="dropdown-content">
+        <a routerLink="/items" title="get items">get items</a>
+        <a routerLink="/create-item" title="create item">create item</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">users</button>
+      <div class="dropdown-content">
+        <a routerLink="/users" title="get users"> get users</a>
+      </div>
+    </div>
+    <div class="dropdown">
+      <button class="dropbtn">orders</button>
+      <div class="dropdown-content">
+        <a routerLink="/orders" title=" get orders"> get orders</a>
+      </div>
+    </div>
   </nav>
 </div>
+
