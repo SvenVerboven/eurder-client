@@ -1,8 +1,11 @@
 .container{
-  margin-left: 20px;
+  margin: 0 20px;
 }
 
-h1{
+.search-item{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   margin: 10px 0;
 }
 

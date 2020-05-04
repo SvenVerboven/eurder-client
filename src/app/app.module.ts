@@ -9,6 +9,9 @@ import { OrdersComponent } from './orders/orders.component';
 import { UsersComponent } from './users/users.component';
 import { AppRoutingModule } from './app-routing.module';
 import { BottomBarComponent } from './bottom-bar/bottom-bar.component';
+import {Ng2SearchPipeModule} from 'ng2-search-filter';
+import {FormsModule} from '@angular/forms';
+import { FilterByItemNamePipe } from './filter-by-item-name.pipe';
 
 @NgModule({
   declarations: [
@@ -17,12 +20,15 @@ import { BottomBarComponent } from './bottom-bar/bottom-bar.component';
     ItemsComponent,
     OrdersComponent,
     UsersComponent,
-    BottomBarComponent
+    BottomBarComponent,
+    FilterByItemNamePipe
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    Ng2SearchPipeModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

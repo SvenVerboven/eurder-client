@@ -1,7 +1,10 @@
 <div class="container">
-  <h1>Items</h1>
+  <div class="search-item">
+    <h1>Items</h1>
+    <input type="text" name="search-items" [(ngModel)]="searchText" placeholder="Filter by name...">
+  </div>
   <div class="container-items">
-    <div class="container-item" *ngFor="let item of items">
+    <div class="container-item" *ngFor="let item of items | filterByItemName:searchText">
       <p>{{item.name}}</p>
       <img alt="item placeholder" height="150px" src="../../assets/item-placeholder.jpg"/>
       <div class="container-stock-info">

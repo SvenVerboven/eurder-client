@@ -9,6 +9,7 @@ import {ItemService} from '../item.service';
 })
 export class ItemsComponent implements OnInit {
   items: Item[];
+  searchText: string;
 
   constructor(private itemService: ItemService) {
   }
@@ -20,5 +21,4 @@ export class ItemsComponent implements OnInit {
   getItems(): void {
     this.itemService.getItems().subscribe(items => this.items = items);
   }
-
 }
