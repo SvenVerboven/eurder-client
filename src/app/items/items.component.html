@@ -1,1 +1,14 @@
-<p>items works!</p>
+<div class="container">
+  <h1>Items</h1>
+  <div class="container-items">
+    <div *ngFor="let item of items">
+      <p>{{item.name}}</p>
+      <img alt="item placeholder" height="150px" src="../../assets/item-placeholder.jpg"/>
+      <div class="container-stock-info">
+        <p>Price: <span>{{item.price | currency:'EUR'}}</span></p>
+        <p>{{item.urgencyIndicator | slice:item.urgencyIndicator.indexOf('_') + 1:item.urgencyIndicator.length}}</p>
+        <img alt="urgency indicator stock" height="15px" src="../../assets/{{item.urgencyIndicator}}.png">
+      </div>
+    </div>
+  </div>
+</div>
