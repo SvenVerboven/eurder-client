@@ -1,8 +1,4 @@
 .toolbar {
-  /*position: absolute;*/
-  /*top: 0;*/
-  /*left: 0;*/
-  /*right: 0;*/
   height: 60px;
   display: flex;
   flex-direction: row;
@@ -13,12 +9,16 @@
 }
 
 .toolbar img {
+  height: 60%;
   margin: 0 16px;
 }
 
 .navigation{
   margin-left: 50px;
   width: 100%;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }
 
 ul {

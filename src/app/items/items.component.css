@@ -8,13 +8,18 @@ h1{
 
 .container-items{
   display: flex;
-  justify-content: space-evenly;
+  flex-direction: row;
+  justify-content: flex-start;
   flex-wrap: wrap;
   margin-top: 50px;
 }
 
 .container-items div{
   text-align: center;
+}
+
+.container-item{
+  margin: 10px 10px;
 }
 
 .container-stock-info{
