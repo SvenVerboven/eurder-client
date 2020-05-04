@@ -54,5 +54,17 @@ a{
   letter-spacing: .03rem;
 }
 
+a:-webkit-any-link:active {
+  color: white;
+}
+a:-webkit-any-link {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+:focus {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
 
 
