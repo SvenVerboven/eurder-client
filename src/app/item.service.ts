@@ -15,9 +15,18 @@ export class ItemService {
 
   constructor(private http: HttpClient) { }
 
+  /** GET items from the server */
   getItems(): Observable<Item[]>{
     return this.http.get<Item[]>(this.itemsUrl)
       .pipe(catchError(this.handleError<Item[]>('getItems', [])));
+  }
+
+  /** POST: add a new item to the server */
+  addItem(item: Item): Observable<Item> {
+    return this.http.post<Item>(this.itemsUrl, item, this.httpOptions)
+      .pipe(
+        catchError(this.handleError<Item>('addItem'))
+      );
   }
 
   /**

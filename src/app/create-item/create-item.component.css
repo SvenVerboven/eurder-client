@@ -1,0 +1,47 @@
+.container{
+  margin: 0 20px;
+}
+
+.header-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.full-screen-input{
+  width: 100%;
+}
+
+.margin-right{
+  margin-right: 20px;
+}
+
+input.right-align::-webkit-outer-spin-button,
+input.right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.right-align {
+  -moz-appearance: textfield;
+  text-align: right;
+}
+
+.button-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.create-button{
+  background-color: #60a917;
+  flex-grow: 3;
+  margin-right: 10px;
+}
+
+button{
+  text-transform: uppercase;
+}
+
+
+

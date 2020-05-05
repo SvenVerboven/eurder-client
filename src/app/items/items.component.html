@@ -1,9 +1,9 @@
 <div class="container">
-  <div class="search-item">
+  <div class="header-container">
     <h1>Items</h1>
     <input type="text" name="search-items" [(ngModel)]="searchText" placeholder="Filter by name...">
   </div>
-  <div class="container-items">
+  <div class="container-items" *ngIf="items; else loading">
     <div class="container-item" *ngFor="let item of items | filterByItemName:searchText">
       <p>{{item.name}}</p>
       <img alt="item placeholder" height="150px" src="../../assets/item-placeholder.jpg"/>
@@ -14,4 +14,5 @@
       </div>
     </div>
   </div>
+  <ng-template #loading>Fetching data from the server... wait a second...</ng-template>
 </div>
