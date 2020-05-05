@@ -31,6 +31,6 @@ export class CreateItemComponent implements OnInit {
   }
 
   clearForm() {
-    this.itemForm.reset();
+    this.router.navigate(['/items']);
   }
 }

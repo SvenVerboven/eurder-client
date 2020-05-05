@@ -1,6 +1,6 @@
 <div class="container">
   <div class="header-container">
-    <h1>Create item</h1>
+    <h1>Create Item</h1>
   </div>
   <form [formGroup]="itemForm" class="form-container">
     <mat-form-field appearance="outline" class="full-screen-input">
@@ -10,7 +10,9 @@
     </mat-form-field>
     <mat-form-field appearance="outline" class="full-screen-input">
       <mat-label>Description</mat-label>
-      <textarea matInput required formControlName="description"></textarea>
+      <textarea matInput required formControlName="description" #input></textarea>
+      <mat-hint align="end" *ngIf="input.value?.length < 255">{{255 - input.value?.length}}/255</mat-hint>
+      <mat-hint align="end" *ngIf="input.value?.length >= 255" class="red-hint">0/255</mat-hint>
       <mat-error *ngIf="itemForm.get('description').hasError('required')">Description is required</mat-error>
       <mat-error *ngIf="itemForm.get('description').hasError('maxlength')">Max characters allowed is 255</mat-error>
     </mat-form-field>
