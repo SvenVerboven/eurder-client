@@ -36,3 +36,7 @@
 p, img{
   margin-bottom: 5px;
 }
+
+.router-links{
+  cursor: pointer;
+}

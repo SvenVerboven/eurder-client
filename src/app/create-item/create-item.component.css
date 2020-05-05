@@ -35,6 +35,7 @@ input.right-align {
 
 .create-button{
   background-color: #60a917;
+  color: white;
   flex-grow: 3;
   margin-right: 10px;
 }
@@ -44,7 +45,7 @@ button{
 }
 
 .red-hint{
-  color: red;
+  color: #fc0000;
 }
 
 

@@ -30,7 +30,7 @@ export class CreateItemComponent implements OnInit {
     this.itemService.addItem(this.itemForm.value).subscribe(item => this.router.navigate(['/items', item.id]));
   }
 
-  clearForm() {
+  goToItems() {
     this.router.navigate(['/items']);
   }
 }

@@ -1,7 +1,7 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
 import {HttpClient, HttpHeaders} from '@angular/common/http';
 import {Observable, of} from 'rxjs';
-import { catchError} from 'rxjs/operators';
+import {catchError} from 'rxjs/operators';
 import {Item} from './item';
 
 @Injectable({
@@ -10,23 +10,29 @@ import {Item} from './item';
 export class ItemService {
   private itemsUrl = 'https://order-sven-verboven.herokuapp.com/items';
   httpOptions = {
-    headers: new HttpHeaders({ 'Content-Type': 'application/json' })
+    headers: new HttpHeaders({'Content-Type': 'application/json'})
   };
 
-  constructor(private http: HttpClient) { }
+  constructor(private http: HttpClient) {
+  }
 
   /** GET items from the server */
-  getItems(): Observable<Item[]>{
+  getItems(): Observable<Item[]> {
     return this.http.get<Item[]>(this.itemsUrl)
       .pipe(catchError(this.handleError<Item[]>('getItems', [])));
+  }
+
+  /** GET item by id */
+  getItem(id: number): Observable<Item> {
+    const url = `${this.itemsUrl}/${id}`;
+    return this.http.get<Item>(url)
+      .pipe(catchError(this.handleError<Item>(`getItem id=${id}`)));
   }
 
   /** POST: add a new item to the server */
   addItem(item: Item): Observable<Item> {
     return this.http.post<Item>(this.itemsUrl, item, this.httpOptions)
-      .pipe(
-        catchError(this.handleError<Item>('addItem'))
-      );
+      .pipe(catchError(this.handleError<Item>('addItem')));
   }
 
   /**

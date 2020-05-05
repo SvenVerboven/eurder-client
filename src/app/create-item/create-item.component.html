@@ -16,10 +16,10 @@
       <mat-error *ngIf="itemForm.get('description').hasError('required')">Description is required</mat-error>
       <mat-error *ngIf="itemForm.get('description').hasError('maxlength')">Max characters allowed is 255</mat-error>
     </mat-form-field>
+    <mat-icon>euro</mat-icon>
     <mat-form-field appearance="outline" class="margin-right">
       <mat-label>Price</mat-label>
       <input matInput type="number" class="right-align" required formControlName="price">
-      <span matPrefix>&#8364;</span>
       <mat-error *ngIf="itemForm.get('price').hasError('required')">Price is required</mat-error>
       <mat-error *ngIf="itemForm.get('price').hasError('min')">Price must be minimal 0</mat-error>
     </mat-form-field>
@@ -31,7 +31,7 @@
     </mat-form-field>
     <div class="button-container">
       <button mat-raised-button class="create-button" [disabled]="!itemForm.valid" (click)="addItem()">create</button>
-      <button mat-raised-button (click)="clearForm()">cancel</button>
+      <button mat-raised-button (click)="goToItems()">cancel</button>
     </div>
   </form>
 </div>

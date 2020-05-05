@@ -1,12 +1,15 @@
 <div class="container">
   <div class="header-container">
     <h1>Items</h1>
-    <input type="text" name="search-items" [(ngModel)]="searchText" placeholder="Filter by name...">
+    <mat-form-field appearance="outline">
+      <mat-label>Filter by name...</mat-label>
+      <input matInput type="text" name="search-items" [(ngModel)]="searchText">
+    </mat-form-field>
   </div>
   <div class="container-items" *ngIf="items; else loading">
     <div class="container-item" *ngFor="let item of items | filterByItemName:searchText">
-      <p>{{item.name}}</p>
-      <img alt="item placeholder" height="150px" src="../../assets/item-placeholder.jpg"/>
+      <p routerLink="{{item.id}}" class="router-links">{{item.name}}</p>
+      <img routerLink="{{item.id}}" alt="item placeholder" height="150px" src="../../assets/item-placeholder.jpg" class="router-links"/>
       <div class="container-stock-info">
         <p>Price: <span>{{item.price | currency:'EUR'}}</span></p>
         <p>{{item.urgencyIndicator | slice:item.urgencyIndicator.indexOf('_') + 1:item.urgencyIndicator.length}}</p>

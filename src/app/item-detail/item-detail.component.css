@@ -1,0 +1,60 @@
+.container{
+  margin: 0 20px;
+}
+
+.header-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 10px 0;
+}
+
+h1{
+  margin: 0 20px 0 0;
+}
+
+span{
+  color: dimgrey;
+}
+
+.full-screen-input{
+  width: 100%;
+}
+
+.margin-right{
+  margin-right: 20px;
+}
+
+input.right-align::-webkit-outer-spin-button,
+input.right-align::-webkit-inner-spin-button {
+  display: none;
+}
+
+input.right-align {
+  -moz-appearance: textfield;
+  text-align: right;
+}
+
+.button-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+}
+
+button{
+  text-transform: uppercase;
+}
+
+.edit-button{
+  background-color: #1976d2;
+  color: #f1f1f1;
+  width: 25%;
+}
+
+.back-button{
+  background-color: whitesmoke;
+  margin-left: 10px;
+  width: 10%;
+}
