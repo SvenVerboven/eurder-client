@@ -1,0 +1,49 @@
+.container{
+  margin: 0 20px;
+}
+
+.header-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+table {
+  width: 100%;
+}
+
+th{
+  background-color: whitesmoke;
+  text-transform: uppercase;
+  font-size: 1.3em;
+}
+
+button{
+  text-transform: uppercase;
+}
+
+.new-customer-button{
+  background-color: #60a917;
+  color: white;
+}
+
+.view-button{
+  background-color: #dae8fc;
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+.edit-button{
+  background-color: #1976d2;
+  color: white;
+  font-weight: bold;
+}
+
+.button-column{
+text-align: right;
+}
+
+:host ::ng-deep .custom-spinner circle{
+  stroke: #1976d2;
+}

@@ -30,8 +30,8 @@
       <mat-error *ngIf="itemForm.get('stockAmount').hasError('min')">Stock amount must be minimal 0</mat-error>
     </mat-form-field>
     <div class="button-container">
-      <button mat-raised-button class="create-button" [disabled]="!itemForm.valid" (click)="addItem()">create</button>
-      <button mat-raised-button class="cancel-button" (click)="goToItems()">cancel</button>
+      <button mat-raised-button class="create-button" matTooltip="Create item" [disabled]="!itemForm.valid" (click)="addItem()">create</button>
+      <button mat-raised-button class="cancel-button" matTooltip="Go to items" (click)="goToItems()">cancel</button>
     </div>
   </form>
 </div>
