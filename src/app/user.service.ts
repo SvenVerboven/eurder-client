@@ -22,6 +22,12 @@ export class UserService {
       .pipe(catchError(this.handleError<User[]>('getUsers', [])));
   }
 
+  /** POST: add a new item to the server */
+  addUser(user: User): Observable<User> {
+    return this.http.post<User>(this.userUrl, user, this.httpOptions)
+      .pipe(catchError(this.handleError<User>('addUser')));
+  }
+
   /**
    * Handle Http operation that failed.
    * Let the app continue.

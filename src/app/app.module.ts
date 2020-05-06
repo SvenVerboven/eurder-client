@@ -29,6 +29,7 @@ import {MatIconModule} from '@angular/material/icon';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatTableModule} from '@angular/material/table';
 import {MatTooltipModule} from '@angular/material/tooltip';
+import { CreateUserComponent } from './create-user/create-user.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import {MatTooltipModule} from '@angular/material/tooltip';
     CreateItemComponent,
     ItemDetailComponent,
     PagenotfoundComponent,
-    UpdateItemComponent
+    UpdateItemComponent,
+    CreateUserComponent
   ],
   imports: [
     BrowserModule,

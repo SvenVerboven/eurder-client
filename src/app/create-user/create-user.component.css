@@ -1,0 +1,44 @@
+.container{
+  margin: 0 20px;
+}
+
+.header-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+.form-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.row-container{
+  display: flex;
+  flex-direction: row;
+}
+
+.full-screen-input{
+  width: 100%;
+}
+
+.create-button{
+  background-color: #60a917;
+  color: white;
+  flex-grow: 3;
+  margin-right: 10px;
+}
+
+.cancel-button{
+  background-color: whitesmoke;
+}
+
+button{
+  text-transform: uppercase;
+}
+
+input.number::-webkit-outer-spin-button,
+input.number::-webkit-inner-spin-button {
+  display: none;
+}
