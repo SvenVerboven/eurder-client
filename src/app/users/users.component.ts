@@ -1,6 +1,7 @@
 import {Component, OnInit} from '@angular/core';
 import {User} from '../user';
 import {UserService} from '../user.service';
+import {MatTableDataSource} from '@angular/material/table';
 
 @Component({
   selector: 'app-users',
@@ -8,7 +9,7 @@ import {UserService} from '../user.service';
   styleUrls: ['./users.component.css']
 })
 export class UsersComponent implements OnInit {
-  dataSource: User[];
+  dataSource: MatTableDataSource<User>;
   displayedColumns = ['id', 'firstName', 'lastName', 'actions'];
 
   constructor(private userService: UserService) {
@@ -19,6 +20,12 @@ export class UsersComponent implements OnInit {
   }
 
   getUsers(): void {
-    this.userService.getUsers().subscribe(users => this.dataSource = users);
+    this.userService.getUsers().subscribe(users => this.dataSource = new MatTableDataSource<User>(users));
+  }
+
+  applyFilter(event: Event) {
+    this.dataSource.filterPredicate = (data: User, filter: string) =>
+      data.lastName.trim().toLowerCase().startsWith(filter);
+    this.dataSource.filter = (event.target as HTMLInputElement).value.trim().toLowerCase();
   }
 }
