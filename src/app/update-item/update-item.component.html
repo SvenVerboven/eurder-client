@@ -1,7 +1,6 @@
 <div class="container" *ngIf="itemForm ; else loading">
   <div class="header-container">
-    <h1>Item</h1>
-    <span>{{itemForm.get('id').value}}</span>
+    <h1>Item <span class="header-information">{{itemForm.get('id').value}}</span></h1>
   </div>
   <form [formGroup]="itemForm" class="form-container">
     <mat-form-field appearance="outline" class="full-screen-input">
@@ -39,7 +38,8 @@
       <mat-error *ngIf="itemForm.get('stockAmount').hasError('min')">Stock amount must be minimal 0</mat-error>
     </mat-form-field>
     <div class="button-container">
-      <button mat-raised-button class="update-button" [disabled]="!itemForm.valid" (click)="updateItem()">update</button>
+      <button mat-raised-button class="update-button" [disabled]="!itemForm.valid" (click)="updateItem()">update
+      </button>
       <button mat-raised-button class="cancel-button" (click)="goToItemDetail()">cancel</button>
     </div>
   </form>

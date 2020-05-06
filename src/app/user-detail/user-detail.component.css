@@ -18,47 +18,44 @@ h1{
   color: dimgrey;
 }
 
-.full-screen-input{
-  width: 100%;
+.form-container{
+  display: flex;
+  flex-direction: column;
 }
 
-.margin-right{
-  margin-right: 20px;
-}
-
-input.right-align::-webkit-outer-spin-button,
-input.right-align::-webkit-inner-spin-button {
-  display: none;
-}
-
-input.right-align {
-  -moz-appearance: textfield;
-  text-align: right;
+.row-container{
+  display: flex;
+  flex-direction: row;
 }
 
 .button-container{
   display: flex;
   flex-direction: row;
   justify-content: flex-end;
-  flex-wrap: wrap;
+}
+
+.edit-button{
+  background-color: #1976d2;
+  color: white;
+  margin-right: 10px;
+  width: 25%;
+}
+
+.back-button{
+  background-color: whitesmoke;
+  width: 10%;
 }
 
 button{
   text-transform: uppercase;
 }
 
-.edit-button{
-  background-color: #1976d2;
-  color: #f1f1f1;
-  width: 25%;
-}
-
-.back-button{
-  background-color: whitesmoke;
-  margin-left: 10px;
-  width: 10%;
+input.number::-webkit-outer-spin-button,
+input.number::-webkit-inner-spin-button {
+  display: none;
 }
 
 :host ::ng-deep .custom-spinner circle{
   stroke: #1976d2;
 }
+

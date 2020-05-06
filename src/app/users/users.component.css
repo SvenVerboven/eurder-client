@@ -51,3 +51,7 @@ text-align: right;
 :host ::ng-deep .custom-spinner circle{
   stroke: #1976d2;
 }
+
+a{
+  text-decoration: none;
+}

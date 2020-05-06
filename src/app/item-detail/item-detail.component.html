@@ -1,7 +1,6 @@
 <div class="container" *ngIf="item; else loading">
   <div class="header-container">
-    <h1>Item</h1>
-    <span>{{item.id}}</span>
+    <h1>Item <span class="header-information">{{item.id}}</span></h1>
   </div>
   <form class="form-container">
     <mat-form-field appearance="outline" class="full-screen-input">
@@ -35,4 +34,6 @@
     </div>
   </form>
 </div>
-<ng-template #loading><mat-spinner class="custom-spinner"></mat-spinner></ng-template>
+<ng-template #loading>
+  <mat-spinner class="custom-spinner"></mat-spinner>
+</ng-template>

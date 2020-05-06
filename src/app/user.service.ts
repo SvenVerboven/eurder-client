@@ -22,6 +22,13 @@ export class UserService {
       .pipe(catchError(this.handleError<User[]>('getUsers', [])));
   }
 
+  /** GET user by id */
+  getUser(id: number): Observable<User> {
+    const url = `${this.userUrl}/${id}`;
+    return this.http.get<User>(url)
+      .pipe(catchError(this.handleError<User>(`getUser id=${id}`)));
+  }
+
   /** POST: add a new item to the server */
   addUser(user: User): Observable<User> {
     return this.http.post<User>(this.userUrl, user, this.httpOptions)

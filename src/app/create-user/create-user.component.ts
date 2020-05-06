@@ -36,7 +36,11 @@ export class CreateUserComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addUser() {
+  addUser(): void {
     this.userService.addUser(this.userForm.value).subscribe(user => this.router.navigate(['/users', user.id]));
+  }
+
+  goToUsers(): void {
+    this.router.navigate(['/users']);
   }
 }

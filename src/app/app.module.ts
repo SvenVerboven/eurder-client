@@ -30,6 +30,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatTableModule} from '@angular/material/table';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { CreateUserComponent } from './create-user/create-user.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
 
 
 @NgModule({
@@ -45,7 +46,8 @@ import { CreateUserComponent } from './create-user/create-user.component';
     ItemDetailComponent,
     PagenotfoundComponent,
     UpdateItemComponent,
-    CreateUserComponent
+    CreateUserComponent,
+    UserDetailComponent
   ],
   imports: [
     BrowserModule,

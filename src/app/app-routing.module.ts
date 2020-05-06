@@ -9,6 +9,7 @@ import {ItemDetailComponent} from './item-detail/item-detail.component';
 import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component';
 import {UpdateItemComponent} from './update-item/update-item.component';
 import {CreateUserComponent} from './create-user/create-user.component';
+import {UserDetailComponent} from './user-detail/user-detail.component';
 
 const routes: Routes = [
   {path: 'items', component: ItemsComponent},
@@ -16,6 +17,7 @@ const routes: Routes = [
   {path: 'create-item', component: CreateItemComponent},
   {path: 'update-item/:id', component: UpdateItemComponent},
   {path: 'users', component: UsersComponent},
+  {path: 'users/:id', component: UserDetailComponent},
   {path: 'create-user', component: CreateUserComponent},
   {path: 'orders', component: OrdersComponent},
   {path: '', redirectTo: '/items', pathMatch: 'full'},
