@@ -16,7 +16,7 @@ export class ItemService {
   constructor(private http: HttpClient) {
   }
 
-  /** GET items from the server */
+  /** GET items from the server.  */
   getItems(): Observable<Item[]> {
     return this.http.get<Item[]>(this.itemsUrl)
       .pipe(catchError(this.handleError<Item[]>('getItems', [])));
@@ -33,6 +33,13 @@ export class ItemService {
   addItem(item: Item): Observable<Item> {
     return this.http.post<Item>(this.itemsUrl, item, this.httpOptions)
       .pipe(catchError(this.handleError<Item>('addItem')));
+  }
+
+  /** PUT: update the item on the server. Returns the updated hero upon success. */
+  updateItem(id: number, item: Item): Observable<any> {
+    return this.http.put(`${this.itemsUrl}/${id}`, item, this.httpOptions)
+      .pipe(catchError(this.handleError<any>('updateItem'))
+      );
   }
 
   /**

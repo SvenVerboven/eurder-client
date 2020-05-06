@@ -1,28 +1,36 @@
 <div class="container" *ngIf="item; else loading">
   <div class="header-container">
     <h1>Item</h1>
-    <span>id: {{item.id}}</span>
+    <span>{{item.id}}</span>
   </div>
   <form class="form-container">
-    <mat-form-field appearance="fill" class="full-screen-input">
+    <mat-form-field appearance="outline" class="full-screen-input">
       <mat-label>Name</mat-label>
-      <input matInput readonly value="{{item.name}}">
+      <label for="name">
+        <input id="name" matInput readonly value="{{item.name}}">
+      </label>
     </mat-form-field>
-    <mat-form-field appearance="fill" class="full-screen-input">
+    <mat-form-field appearance="outline" class="full-screen-input">
       <mat-label>Description</mat-label>
-      <textarea matInput readonly>{{item.description}}</textarea>
+      <label for="description">
+        <textarea id="description" matInput readonly>{{item.description}}</textarea>
+      </label>
     </mat-form-field>
     <mat-icon>euro</mat-icon>
-    <mat-form-field appearance="fill" class="margin-right">
+    <mat-form-field appearance="outline" class="margin-right">
       <mat-label>Price</mat-label>
-      <input matInput type="number" class="right-align" readonly value="{{item.price}}">
+      <label for="price">
+        <input id="price" matInput type="number" class="right-align" readonly value="{{item.price}}">
+      </label>
     </mat-form-field>
-    <mat-form-field appearance="fill">
+    <mat-form-field appearance="outline">
       <mat-label>Amount of stock</mat-label>
-      <input matInput type="number" class="right-align" readonly value="{{item.stockAmount}}">
+      <label for="stockAmount">
+        <input id="stockAmount" matInput type="number" class="right-align" readonly value="{{item.stockAmount}}">
+      </label>
     </mat-form-field>
     <div class="button-container">
-      <button mat-raised-button class="edit-button">edit</button>
+      <button mat-raised-button class="edit-button" (click)="goToUpdateItem()">edit</button>
       <button mat-raised-button class="back-button" (click)="goToItems()">back</button>
     </div>
   </form>

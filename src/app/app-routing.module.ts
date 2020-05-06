@@ -7,13 +7,15 @@ import {OrdersComponent} from './orders/orders.component';
 import {CreateItemComponent} from './create-item/create-item.component';
 import {ItemDetailComponent} from './item-detail/item-detail.component';
 import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component';
+import {UpdateItemComponent} from './update-item/update-item.component';
 
 const routes: Routes = [
   {path: 'items', component: ItemsComponent},
   {path: 'items/:id', component: ItemDetailComponent},
+  {path: 'create-item', component: CreateItemComponent},
+  {path: 'update-item/:id', component: UpdateItemComponent},
   {path: 'users', component: UsersComponent},
   {path: 'orders', component: OrdersComponent},
-  {path: 'create-item', component: CreateItemComponent},
   {path: '', redirectTo: '/items', pathMatch: 'full'},
   {path: '**', component: PagenotfoundComponent}
 ];

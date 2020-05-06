@@ -33,4 +33,7 @@ export class ItemDetailComponent implements OnInit {
     this.router.navigate(['/items']);
   }
 
+  goToUpdateItem() {
+    this.router.navigate(['/update-item', this.item.id]);
+  }
 }

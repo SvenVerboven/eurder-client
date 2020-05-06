@@ -23,6 +23,7 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatIconModule} from '@angular/material/icon';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
 import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
+import { UpdateItemComponent } from './update-item/update-item.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { PagenotfoundComponent } from './pagenotfound/pagenotfound.component';
     FilterByItemNamePipe,
     CreateItemComponent,
     ItemDetailComponent,
-    PagenotfoundComponent
+    PagenotfoundComponent,
+    UpdateItemComponent
   ],
   imports: [
     BrowserModule,
