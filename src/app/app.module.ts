@@ -31,6 +31,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import { CreateUserComponent } from './create-user/create-user.component';
 import { UserDetailComponent } from './user-detail/user-detail.component';
+import { UpdateUserComponent } from './update-user/update-user.component';
 
 
 @NgModule({
@@ -47,7 +48,8 @@ import { UserDetailComponent } from './user-detail/user-detail.component';
     PagenotfoundComponent,
     UpdateItemComponent,
     CreateUserComponent,
-    UserDetailComponent
+    UserDetailComponent,
+    UpdateUserComponent
   ],
   imports: [
     BrowserModule,

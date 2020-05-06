@@ -62,5 +62,9 @@ button{
   color: #fc0000;
 }
 
+:host ::ng-deep .custom-spinner circle{
+  stroke: #1976d2;
+}
+
 
 

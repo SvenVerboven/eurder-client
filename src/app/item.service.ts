@@ -35,7 +35,7 @@ export class ItemService {
       .pipe(catchError(this.handleError<Item>('addItem')));
   }
 
-  /** PUT: update the item on the server. Returns the updated hero upon success. */
+  /** PUT: update the item on the server. Returns the updated item upon success. */
   updateItem(id: number, item: Item): Observable<any> {
     return this.http.put(`${this.itemsUrl}/${id}`, item, this.httpOptions)
       .pipe(catchError(this.handleError<any>('updateItem'))

@@ -27,7 +27,7 @@
       </th>
       <td mat-cell *matCellDef="let user" class="button-column">
         <button mat-raised-button matTooltip="View customer details" class="view-button" (click)="goToUserDetails(user.id)">view</button>
-        <button mat-raised-button matTooltip="Edit customer details" class="edit-button">edit</button>
+        <button mat-raised-button matTooltip="Edit customer details" class="edit-button" (click)="goToUpdateUser(user.id)">edit</button>
       </td>
     </ng-container>
     <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>

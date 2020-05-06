@@ -35,6 +35,13 @@ export class UserService {
       .pipe(catchError(this.handleError<User>('addUser')));
   }
 
+
+  /** PUT: update the user on the server. Returns the updated user upon success. */
+  updateUser(id: number, user: User): Observable<any> {
+    return this.http.put(`${this.userUrl}/${id}`, user, this.httpOptions)
+      .pipe(catchError(this.handleError<any>('updateItem')));
+  }
+
   /**
    * Handle Http operation that failed.
    * Let the app continue.

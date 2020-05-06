@@ -10,6 +10,7 @@ import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component';
 import {UpdateItemComponent} from './update-item/update-item.component';
 import {CreateUserComponent} from './create-user/create-user.component';
 import {UserDetailComponent} from './user-detail/user-detail.component';
+import {UpdateUserComponent} from './update-user/update-user.component';
 
 const routes: Routes = [
   {path: 'items', component: ItemsComponent},
@@ -19,6 +20,7 @@ const routes: Routes = [
   {path: 'users', component: UsersComponent},
   {path: 'users/:id', component: UserDetailComponent},
   {path: 'create-user', component: CreateUserComponent},
+  {path: 'update-user/:id', component: UpdateUserComponent},
   {path: 'orders', component: OrdersComponent},
   {path: '', redirectTo: '/items', pathMatch: 'full'},
   {path: '**', component: PagenotfoundComponent}

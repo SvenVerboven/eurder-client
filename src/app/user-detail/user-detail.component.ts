@@ -31,4 +31,8 @@ export class UserDetailComponent implements OnInit {
   goToUsers(): void {
     this.router.navigate(['/users']);
   }
+
+  goToUpdateUser() {
+    this.router.navigate(['/update-user', this.user.id]);
+  }
 }
