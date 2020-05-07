@@ -32,11 +32,7 @@ export class TopBarComponent implements OnInit {
     this.router.navigate(['/create-customer']);
   }
 
-  goToOrders() {
-    this.router.navigate(['/orders']);
-  }
-
-  goToCreateOrder() {
-    this.router.navigate(['/orders']);
+  goToBasket() {
+    this.router.navigate(['/basket']);
   }
 }

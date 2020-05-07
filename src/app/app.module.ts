@@ -6,7 +6,6 @@ import {AppComponent} from './app.component';
 import {TopBarComponent} from './top-bar/top-bar.component';
 import {ItemsComponent} from './items/items.component';
 import {CreateItemComponent} from './create-item/create-item.component';
-import {OrdersComponent} from './orders/orders.component';
 import {UsersComponent} from './users/users.component';
 import {ItemDetailComponent} from './item-detail/item-detail.component';
 import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component';
@@ -41,7 +40,6 @@ import { CartComponent } from './cart/cart.component';
     AppComponent,
     TopBarComponent,
     ItemsComponent,
-    OrdersComponent,
     UsersComponent,
     BottomBarComponent,
     FilterByItemNamePipe,

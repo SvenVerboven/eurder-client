@@ -14,6 +14,10 @@
   margin: 0 16px;
 }
 
+.example-spacer {
+  flex: 1 1 auto;
+}
+
 a{
   padding: 8px;
   font-weight: 400;

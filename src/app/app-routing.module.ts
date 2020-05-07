@@ -3,7 +3,6 @@ import {CommonModule} from '@angular/common';
 import {Routes, RouterModule} from '@angular/router';
 import {ItemsComponent} from './items/items.component';
 import {UsersComponent} from './users/users.component';
-import {OrdersComponent} from './orders/orders.component';
 import {CreateItemComponent} from './create-item/create-item.component';
 import {ItemDetailComponent} from './item-detail/item-detail.component';
 import {PagenotfoundComponent} from './pagenotfound/pagenotfound.component';
@@ -23,7 +22,6 @@ const routes: Routes = [
   {path: 'create-customer', component: CreateUserComponent},
   {path: 'update-customer/:id', component: UpdateUserComponent},
   {path: 'basket', component: CartComponent},
-  {path: 'orders', component: OrdersComponent},
   {path: '', redirectTo: '/items', pathMatch: 'full'},
   {path: '**', component: PagenotfoundComponent}
 ];

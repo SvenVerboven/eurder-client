@@ -10,10 +10,9 @@
     <button mat-menu-item (click)="goToCustomers()">view customers</button>
     <button mat-menu-item (click)="goToCreateCustomer()">create customer</button>
   </mat-menu>
-  <button mat-button [matMenuTriggerFor]="orders">Orders</button>
-  <mat-menu #orders="matMenu">
-    <button mat-menu-item (click)="goToOrders()">view customers</button>
-    <button mat-menu-item (click)="goToCreateOrder()">create customer</button>
-  </mat-menu>
+  <span class="example-spacer"></span>
+  <button mat-button (click)="goToBasket()" matTooltip="Go to your basket">
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
 </div>
 
