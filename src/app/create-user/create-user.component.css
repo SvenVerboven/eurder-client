@@ -9,14 +9,10 @@
   margin: 10px 0;
 }
 
-.form-container{
-  display: flex;
-  flex-direction: column;
-}
-
 .row-container{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .full-screen-input{

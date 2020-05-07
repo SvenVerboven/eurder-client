@@ -38,4 +38,8 @@ export class CartComponent implements OnInit {
   increaseAmount(itemId: number): void {
     this.cartService.increaseAmount(itemId);
   }
+
+  placeOrder() {
+
+  }
 }

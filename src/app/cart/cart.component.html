@@ -52,7 +52,7 @@
       <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
       <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
     </table>
-    <button mat-raised-button class="place-order-button">place order</button>
+    <button mat-raised-button class="place-order-button" (click)="placeOrder()">place order</button>
   </div>
 </div>
 <ng-template #basketIsEmpty>Is empty, go shopping!</ng-template>

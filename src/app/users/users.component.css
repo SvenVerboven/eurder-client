@@ -1,15 +1,15 @@
-.container{
+.container {
   margin: 0 20px;
 }
 
-.header-container{
+.header-container {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   margin: 10px 0;
 }
 
-h1{
+h1 {
   margin: 0;
 }
 
@@ -17,41 +17,41 @@ table {
   width: 100%;
 }
 
-th{
+th {
   background-color: whitesmoke;
   text-transform: uppercase;
   font-size: 1.3em;
 }
 
-button{
+button {
   text-transform: uppercase;
 }
 
-.new-customer-button{
+.new-customer-button {
   background-color: #60a917;
   color: white;
 }
 
-.view-button{
+.view-button {
   background-color: #dae8fc;
   font-weight: bold;
   margin-right: 10px;
 }
 
-.edit-button{
+.edit-button {
   background-color: #1976d2;
   color: white;
   font-weight: bold;
 }
 
-.button-column{
-text-align: right;
+.button-column {
+  text-align: right;
 }
 
-:host ::ng-deep .custom-spinner circle{
+:host ::ng-deep .custom-spinner circle {
   stroke: #1976d2;
 }
 
-a, a:visited{
+a, a:visited {
   text-decoration: none;
 }
