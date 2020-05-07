@@ -48,4 +48,8 @@ export class ItemDetailComponent implements OnInit {
         verticalPosition: 'top',
       });
   }
+
+  goToBasket() {
+    this.router.navigate(['/basket']);
+  }
 }

@@ -33,6 +33,7 @@ import {MatTableModule} from '@angular/material/table';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
+import { CartComponent } from './cart/cart.component';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
     UpdateItemComponent,
     CreateUserComponent,
     UserDetailComponent,
-    UpdateUserComponent
+    UpdateUserComponent,
+    CartComponent
   ],
   imports: [
     BrowserModule,

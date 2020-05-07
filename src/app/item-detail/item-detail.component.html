@@ -1,7 +1,7 @@
 <div class="container" *ngIf="item; else loading">
   <div class="header-container">
     <h1>Item <span class="header-information">{{item.id}}</span></h1>
-    <button mat-raised-button class="basket-button" matTooltip="Go to your basket">view basket</button>
+    <button mat-raised-button class="basket-button" matTooltip="Go to your basket" (click)="goToBasket()">view basket</button>
   </div>
   <form class="form-container">
     <mat-form-field appearance="outline" class="full-screen-input">

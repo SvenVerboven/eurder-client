@@ -1,0 +1,58 @@
+<div class="container">
+  <div class="header-container">
+    <h1>Your shopping basket</h1>
+  </div>
+  <div *ngIf="dataSource.length; else basketIsEmpty">
+    <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+      <ng-container matColumnDef="name">
+        <th mat-header-cell *matHeaderCellDef>product</th>
+        <td mat-cell *matCellDef="let order">{{order.item.name}}</td>
+        <td mat-footer-cell *matFooterCellDef></td>
+      </ng-container>
+      <ng-container matColumnDef="decreaseButton" >
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let order" class="decrease-button">
+          <button mat-raised-button (click)="decreaseAmount(order.item.id)">
+            <mat-icon>remove</mat-icon>
+          </button>
+        </td>
+        <td mat-footer-cell *matFooterCellDef></td>
+      </ng-container>
+      <ng-container matColumnDef="amount">
+        <th mat-header-cell *matHeaderCellDef>amount</th>
+        <td mat-cell *matCellDef="let order" class="amount-column" style="text-align: center">{{order.amount}}</td>
+        <td mat-footer-cell *matFooterCellDef></td>
+      </ng-container>
+      <ng-container matColumnDef="increaseButton" >
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let order" class="increase-button">
+          <button mat-raised-button (click)="increaseAmount(order.item.id)">
+            <mat-icon>add</mat-icon>
+          </button>
+        </td>
+        <td mat-footer-cell *matFooterCellDef></td>
+      </ng-container>
+      <ng-container matColumnDef="price">
+        <th mat-header-cell *matHeaderCellDef>price</th>
+        <td mat-cell *matCellDef="let order" style="text-align: right">{{order.amount * order.item.price | currency:'EUR'}}</td>
+        <td mat-footer-cell *matFooterCellDef></td>
+      </ng-container>
+      <ng-container matColumnDef="actions">
+        <th mat-header-cell *matHeaderCellDef></th>
+        <td mat-cell *matCellDef="let order" class="button-column" style="text-align: right">
+          <button mat-raised-button matTooltip="Delete item from basket" class="delete-button"
+                  (click)="removeItem(order.item)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </td>
+        <td mat-footer-cell *matFooterCellDef
+            style="text-align: right; font-weight: bold"> {{getTotalCost() | currency:'EUR'}}</td>
+      </ng-container>
+      <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+      <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      <tr mat-footer-row *matFooterRowDef="displayedColumns"></tr>
+    </table>
+    <button mat-raised-button class="place-order-button">place order</button>
+  </div>
+</div>
+<ng-template #basketIsEmpty>Is empty, go shopping!</ng-template>
