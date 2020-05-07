@@ -17,10 +17,10 @@ const routes: Routes = [
   {path: 'items/:id', component: ItemDetailComponent},
   {path: 'create-item', component: CreateItemComponent},
   {path: 'update-item/:id', component: UpdateItemComponent},
-  {path: 'users', component: UsersComponent},
-  {path: 'users/:id', component: UserDetailComponent},
-  {path: 'create-user', component: CreateUserComponent},
-  {path: 'update-user/:id', component: UpdateUserComponent},
+  {path: 'customers', component: UsersComponent},
+  {path: 'customers/:id', component: UserDetailComponent},
+  {path: 'create-customer', component: CreateUserComponent},
+  {path: 'update-customer/:id', component: UpdateUserComponent},
   {path: 'orders', component: OrdersComponent},
   {path: '', redirectTo: '/items', pathMatch: 'full'},
   {path: '**', component: PagenotfoundComponent}
@@ -34,5 +34,6 @@ const routes: Routes = [
   ],
   exports: [RouterModule]
 })
+
 export class AppRoutingModule {
 }

@@ -1,25 +1,19 @@
 <div class="toolbar">
   <img alt="Order logo" src="../../assets/order.png"/>
-  <nav>
-    <div class="dropdown">
-      <button class="dropbtn">items</button>
-      <div class="dropdown-content">
-        <a routerLink="/items" title="get items">get items</a>
-        <a routerLink="/create-item" title="create item">create item</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn">users</button>
-      <div class="dropdown-content">
-        <a routerLink="/users" title="get users"> get users</a>
-      </div>
-    </div>
-    <div class="dropdown">
-      <button class="dropbtn">orders</button>
-      <div class="dropdown-content">
-        <a routerLink="/orders" title=" get orders"> get orders</a>
-      </div>
-    </div>
-  </nav>
+  <button mat-button [matMenuTriggerFor]="items">Items</button>
+  <mat-menu #items="matMenu">
+    <button mat-menu-item (click)="goToItems()">view items</button>
+    <button mat-menu-item (click)="goToCreateItem()">create item</button>
+  </mat-menu>
+  <button mat-button [matMenuTriggerFor]="customers">Customers</button>
+  <mat-menu #customers="matMenu">
+    <button mat-menu-item (click)="goToCustomers()">view customers</button>
+    <button mat-menu-item (click)="goToCreateCustomer()">create customer</button>
+  </mat-menu>
+  <button mat-button [matMenuTriggerFor]="orders">Orders</button>
+  <mat-menu #orders="matMenu">
+    <button mat-menu-item (click)="goToOrders()">view customers</button>
+    <button mat-menu-item (click)="goToCreateOrder()">create customer</button>
+  </mat-menu>
 </div>
 

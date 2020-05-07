@@ -32,11 +32,11 @@ export class UsersComponent implements OnInit {
     this.dataSource.filter = (event.target as HTMLInputElement).value.trim().toLowerCase();
   }
 
-  goToUserDetails(id: number) {
-    this.router.navigate(['users/', id]);
+  goToCustomerDetails(id: number) {
+    this.router.navigate(['customers/', id]);
   }
 
-  goToUpdateUser(id: number) {
-    this.router.navigate(['update-user/', id]);
+  goToUpdateCustomer(id: number) {
+    this.router.navigate(['update-customer/', id]);
   }
 }

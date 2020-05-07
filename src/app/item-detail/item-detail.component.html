@@ -1,6 +1,7 @@
 <div class="container" *ngIf="item; else loading">
   <div class="header-container">
     <h1>Item <span class="header-information">{{item.id}}</span></h1>
+    <button mat-raised-button class="basket-button" matTooltip="Go to your basket">view basket</button>
   </div>
   <form class="form-container">
     <mat-form-field appearance="outline" class="full-screen-input">
@@ -29,6 +30,8 @@
       </label>
     </mat-form-field>
     <div class="button-container">
+      <button mat-raised-button class="basket-button" matTooltip="Add item to your basket" (click)="addToCart()">add to basket</button>
+      <span style="flex-grow: 2"></span>
       <button mat-raised-button class="edit-button" matTooltip="Edit item" (click)="goToUpdateItem()">edit</button>
       <button mat-raised-button class="back-button" matTooltip="Go back" (click)="goToItems()">back</button>
     </div>

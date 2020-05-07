@@ -45,10 +45,10 @@ export class UpdateUserComponent implements OnInit {
   }
 
   updateUser(): void {
-    this.userService.updateUser(this.userForm.get('id').value, this.userForm.value).subscribe(() => this.goToUserDetails());
+    this.userService.updateUser(this.userForm.get('id').value, this.userForm.value).subscribe(() => this.goToCustomerDetails());
   }
 
-  goToUserDetails(): void {
-    this.router.navigate(['/users/', this.userForm.get('id').value]);
+  goToCustomerDetails(): void {
+    this.router.navigate(['/customers/', this.userForm.get('id').value]);
   }
 }

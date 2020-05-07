@@ -28,11 +28,11 @@ export class UserDetailComponent implements OnInit {
     this.userService.getUser(id).subscribe(user => this.user = user);
   }
 
-  goToUsers(): void {
-    this.router.navigate(['/users']);
+  goToCustomers(): void {
+    this.router.navigate(['/customers']);
   }
 
-  goToUpdateUser() {
-    this.router.navigate(['/update-user', this.user.id]);
+  goToUpdateCustomer() {
+    this.router.navigate(['/update-customer', this.user.id]);
   }
 }

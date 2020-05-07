@@ -52,6 +52,6 @@ text-align: right;
   stroke: #1976d2;
 }
 
-a{
+a, a:visited{
   text-decoration: none;
 }

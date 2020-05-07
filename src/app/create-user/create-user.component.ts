@@ -37,10 +37,14 @@ export class CreateUserComponent implements OnInit {
   }
 
   addUser(): void {
-    this.userService.addUser(this.userForm.value).subscribe(user => this.router.navigate(['/users', user.id]));
+    this.userService.addUser(this.userForm.value).subscribe(user => this.goToCustomerDetail(user.id));
   }
 
-  goToUsers(): void {
-    this.router.navigate(['/users']);
+  goToCustomerDetail(id: number): void {
+    this.router.navigate(['/customers', id]);
+  }
+
+  goToCustomers(): void {
+    this.router.navigate(['/customers']);
   }
 }
