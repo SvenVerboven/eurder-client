@@ -3,17 +3,19 @@
     <h1>Items</h1>
     <mat-form-field appearance="outline">
       <mat-label>Filter by name...</mat-label>
-      <input matInput type="text" name="search-items" [(ngModel)]="searchText">
+      <label for="search">
+        <input id="search" matInput type="text" name="search-items" [(ngModel)]="searchText">
+      </label>
     </mat-form-field>
   </div>
   <div class="container-items" *ngIf="items; else loading">
     <div class="container-item" *ngFor="let item of items | filterByItemName:searchText">
       <p routerLink="{{item.id}}" class="router-links">{{item.name}}</p>
-      <img routerLink="{{item.id}}" alt="item placeholder" height="150px" src="../../assets/item-placeholder.jpg" class="router-links"/>
+      <img routerLink="{{item.id}}" alt="item placeholder" src="../../assets/item-placeholder.jpg" class="router-links"/>
       <div class="container-stock-info">
         <p>Price: <span>{{item.price | currency:'EUR'}}</span></p>
         <p>{{item.urgencyIndicator | slice:item.urgencyIndicator.indexOf('_') + 1:item.urgencyIndicator.length}}</p>
-        <img alt="urgency indicator stock" height="15px" src="../../assets/{{item.urgencyIndicator}}.png">
+        <img alt="urgency indicator stock" src="../../assets/{{item.urgencyIndicator}}.png">
       </div>
     </div>
   </div>
