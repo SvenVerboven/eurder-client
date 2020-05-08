@@ -19,13 +19,14 @@ h1{
 }
 
 .form-container{
-  display: flex;
-  flex-direction: column;
+  /*display: flex;*/
+  /*flex-direction: column;*/
 }
 
 .row-container{
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
 }
 
 .button-container{
