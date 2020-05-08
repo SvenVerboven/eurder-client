@@ -1,14 +1,24 @@
+// const express = require('express');
+// const app = express()
+//
+//
+// app.use(express.static('dist/eurder-client'));
+//
+// app.listen(process.env.PORT);
+
+//Install express server
 const express = require('express');
-const app = express()
+const path = require('path');
 
-app.get('/*', function(req, res) {
-  res.sendFile(path.join(__dirname, 'dist/eurder-client/index.html'), function(err) {
-    if (err) {
-      res.status(500).send(err)
-    }
-  })
-})
+const app = express();
 
-app.use(express.static('dist/eurder-client'));
+// Serve only the static files form the dist directory
+app.use(express.static(__dirname + '/dist/eurder-client'));
 
-app.listen(process.env.PORT);
+app.get('/*', function(req,res) {
+
+  res.sendFile(path.join(__dirname+'/dist/eurder-client/index.html'));
+});
+
+// Start the app by listening on the default Heroku port
+app.listen(process.env.PORT || 8080);
