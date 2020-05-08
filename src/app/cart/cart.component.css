@@ -49,6 +49,14 @@ input::-webkit-inner-spin-button {
   justify-content: right !important;
 }
 
+::ng-deep .myapp-no-padding-dialog .mat-dialog-container {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  background-color: #60a917 !important;
+  color: white !important;
+}
+
 @media screen and (max-width: 450px) {
 
   .mat-column-name {
@@ -71,6 +79,8 @@ input::-webkit-inner-spin-button {
     font-size: x-small;
   }
 }
+
+
 
 
 

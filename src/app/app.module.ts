@@ -34,6 +34,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { CartComponent } from './cart/cart.component';
 import {MatDialogModule} from '@angular/material/dialog';
+import { CartDialogComponent } from './cart-dialog/cart-dialog.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import {MatDialogModule} from '@angular/material/dialog';
     CreateUserComponent,
     UserDetailComponent,
     UpdateUserComponent,
-    CartComponent
+    CartComponent,
+    CartDialogComponent
   ],
   imports: [
     BrowserModule,
@@ -75,7 +77,9 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatDialogModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [CartDialogComponent]
+
 })
 export class AppModule {
 }

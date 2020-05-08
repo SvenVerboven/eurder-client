@@ -3,6 +3,7 @@ import {Item} from '../item';
 import {CartService} from '../cart.service';
 import {Order} from '../order';
 import {MatDialog} from '@angular/material/dialog';
+import {CartDialogComponent} from '../cart-dialog/cart-dialog.component';
 
 @Component({
   selector: 'app-cart',
@@ -15,7 +16,7 @@ export class CartComponent implements OnInit {
 
   constructor(
     private cartService: CartService,
-    public dialog: MatDialog) {
+    private dialog: MatDialog) {
   }
 
   ngOnInit(): void {
@@ -43,6 +44,17 @@ export class CartComponent implements OnInit {
   }
 
   placeOrder() {
-    this.dataSource = this.cartService.clearCart();
+    this.openDialog();
+  }
+
+  openDialog() {
+    const dialogRef = this.dialog.open(CartDialogComponent,
+      {
+        width: '50%',
+        panelClass: 'myapp-no-padding-dialog',
+        disableClose: true,
+        autoFocus: true
+      });
+    dialogRef.afterClosed().subscribe(() => this.dataSource = this.cartService.clearCart());
   }
 }
