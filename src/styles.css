@@ -12,3 +12,7 @@ body {
   float: right;
   margin: 8px;
 }
+
+.mat-body, .mat-body-1, .mat-typography {
+  width: fit-content;
+}
