@@ -33,6 +33,7 @@ import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { CartComponent } from './cart/cart.component';
+import {MatDialogModule} from '@angular/material/dialog';
 
 
 @NgModule({
@@ -70,7 +71,8 @@ import { CartComponent } from './cart/cart.component';
     MatTableModule,
     MatTooltipModule,
     MatMenuModule,
-    MatSnackBarModule
+    MatSnackBarModule,
+    MatDialogModule
   ],
   providers: [],
   bootstrap: [AppComponent]

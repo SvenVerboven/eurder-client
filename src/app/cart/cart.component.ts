@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Item} from '../item';
 import {CartService} from '../cart.service';
 import {Order} from '../order';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-cart',
@@ -12,7 +13,9 @@ export class CartComponent implements OnInit {
   dataSource: Order[];
   displayedColumns: string[] = ['name', 'decreaseButton', 'amount', 'increaseButton', 'price', 'actions'];
 
-  constructor(private cartService: CartService) {
+  constructor(
+    private cartService: CartService,
+    public dialog: MatDialog) {
   }
 
   ngOnInit(): void {
@@ -40,6 +43,6 @@ export class CartComponent implements OnInit {
   }
 
   placeOrder() {
-
+    this.dataSource = this.cartService.clearCart();
   }
 }

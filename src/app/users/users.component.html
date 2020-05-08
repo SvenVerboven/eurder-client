@@ -8,31 +8,31 @@
       </label>
     </mat-form-field>
   </div>
-  <table mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="dataSource; else loading">
+  <mat-table [dataSource]="dataSource" class="mat-elevation-z8" *ngIf="dataSource; else loading">
     <ng-container matColumnDef="id">
-      <th mat-header-cell *matHeaderCellDef> id</th>
-      <td mat-cell *matCellDef="let user"><a routerLink="{{user.id}}">{{user.id}}</a></td>
+      <mat-header-cell *matHeaderCellDef>id</mat-header-cell>
+      <mat-cell *matCellDef="let user"><a routerLink="{{user.id}}">{{user.id}}</a></mat-cell>
     </ng-container>
     <ng-container matColumnDef="firstName">
-      <th mat-header-cell *matHeaderCellDef> firstname</th>
-      <td mat-cell *matCellDef="let user"> {{user.firstName}} </td>
+      <mat-header-cell *matHeaderCellDef>firstname</mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{user.firstName}} </mat-cell>
     </ng-container>
     <ng-container matColumnDef="lastName">
-      <th mat-header-cell *matHeaderCellDef> lastname</th>
-      <td mat-cell *matCellDef="let user"> {{user.lastName}} </td>
+      <mat-header-cell *matHeaderCellDef>lastname</mat-header-cell>
+      <mat-cell *matCellDef="let user"> {{user.lastName}} </mat-cell>
     </ng-container>
     <ng-container matColumnDef="actions">
-      <th mat-header-cell *matHeaderCellDef class="button-column">
+      <mat-header-cell *matHeaderCellDef class="button-column">
         <button mat-raised-button matTooltip="Add new customer" class="new-customer-button" routerLink="/create-customer">new customer</button>
-      </th>
-      <td mat-cell *matCellDef="let user" class="button-column">
+      </mat-header-cell>
+      <mat-cell *matCellDef="let user" class="button-column">
         <button mat-raised-button matTooltip="View customer details" class="view-button" (click)="goToCustomerDetails(user.id)">view</button>
         <button mat-raised-button matTooltip="Edit customer details" class="edit-button" (click)="goToUpdateCustomer(user.id)">edit</button>
-      </td>
+      </mat-cell>
     </ng-container>
-    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
-    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
-  </table>
+    <mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
+  </mat-table>
 </div>
 <ng-template #loading>
   <mat-spinner class="custom-spinner"></mat-spinner>
