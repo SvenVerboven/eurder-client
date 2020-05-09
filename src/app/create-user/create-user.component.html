@@ -4,14 +4,14 @@
   </div>
   <form [formGroup]="userForm" class="form-container">
     <div class="row-container">
-      <mat-form-field appearance="outline" class="split-screen-input" style="margin-right: 10px; flex-grow: 1">
+      <mat-form-field appearance="outline" class="split-screen-input" style="flex: 1">
         <mat-label>Firstname</mat-label>
         <label for="firstName">
           <input id="firstName" matInput required type="text" formControlName="firstName">
         </label>
         <mat-error *ngIf="userForm.get('firstName').hasError('required')">First name is required</mat-error>
       </mat-form-field>
-      <mat-form-field appearance="outline" class="split-screen-input" style="flex-grow: 1">
+      <mat-form-field appearance="outline" style="flex: 1">
         <mat-label>Lastname</mat-label>
         <label for="lastName">
           <input id="lastName" matInput required type="text" formControlName="lastName">
@@ -19,7 +19,7 @@
         <mat-error *ngIf="userForm.get('lastName').hasError('required')">Last name is required</mat-error>
       </mat-form-field>
     </div>
-    <mat-form-field appearance="outline">
+    <mat-form-field appearance="outline"v class="full-screen-input">
       <mat-label>Email</mat-label>
       <label for="email">
         <input id="email" matInput required type="email" formControlName="email">
@@ -28,7 +28,7 @@
       <mat-error *ngIf="userForm.get('email').hasError('email')">Please enter a valid email address</mat-error>
     </mat-form-field>
     <div class="row-container" formGroupName="phoneNumber">
-      <mat-form-field appearance="outline" style="margin-right: 10px">
+      <mat-form-field appearance="outline" class="split-screen-input" style="flex: 1">
         <mat-icon matPrefix>add</mat-icon>
         <mat-label>Phone number (country code)</mat-label>
         <label for="phoneNumber-countryCode">
@@ -37,7 +37,7 @@
         </label>
         <mat-error *ngIf="userForm.get('phoneNumber.countryCode').hasError('required')">Country code is required</mat-error>
       </mat-form-field>
-      <mat-form-field appearance="outline" style="flex-grow: 10">
+      <mat-form-field appearance="outline" style="flex: 8;">
         <mat-label>Phone number (number)</mat-label>
         <label for="phoneNumber-number">
           <input id="phoneNumber-number" matInput required type="number" class="number" formControlName="number">
@@ -46,14 +46,14 @@
       </mat-form-field>
     </div>
     <div class="row-container" formGroupName="address">
-      <mat-form-field appearance="outline" style="margin-right: 10px; flex-grow: 3">
+      <mat-form-field appearance="outline" class="split-screen-input" style="flex: 8">
         <mat-label>Street</mat-label>
         <label for="street">
           <input id="street" matInput required type="text" formControlName="street">
         </label>
         <mat-error *ngIf="userForm.get('address.street').hasError('required')">Street name is required</mat-error>
       </mat-form-field>
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" style="flex: 1">
         <mat-label>Number</mat-label>
         <label for="number">
           <input id="number" matInput required type="number" class="number" formControlName="houseNumber">
@@ -62,7 +62,7 @@
       </mat-form-field>
     </div>
     <div class="row-container" formGroupName="address">
-      <mat-form-field appearance="outline" style="margin-right: 10px">
+      <mat-form-field appearance="outline" class="split-screen-input">
         <mat-label>Postalcode</mat-label>
         <label for="postalcode">
           <input id="postalcode" matInput required type="number" class="number" formControlName="zipp">
