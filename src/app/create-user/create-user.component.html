@@ -62,14 +62,14 @@
       </mat-form-field>
     </div>
     <div class="row-container" formGroupName="address">
-      <mat-form-field appearance="outline" class="split-screen-input">
+      <mat-form-field appearance="outline" class="split-screen-input" style="flex: 1">
         <mat-label>Postalcode</mat-label>
         <label for="postalcode">
           <input id="postalcode" matInput required type="number" class="number" formControlName="zipp">
         </label>
         <mat-error *ngIf="userForm.get('address.zipp').hasError('required')">Postal code is required</mat-error>
       </mat-form-field>
-      <mat-form-field appearance="outline" style="flex-grow: 1">
+      <mat-form-field appearance="outline" style="flex: 3">
         <mat-label>Country</mat-label>
         <mat-select required formControlName="country">
           <mat-option *ngFor="let country of countries" value="{{country}}">{{country}}</mat-option>

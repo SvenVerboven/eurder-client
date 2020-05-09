@@ -18,15 +18,18 @@ h1{
   color: dimgrey;
 }
 
-.form-container{
-  /*display: flex;*/
-  /*flex-direction: column;*/
-}
-
 .row-container{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+}
+
+.full-screen-input{
+  width: 100%;
+}
+
+.split-screen-input{
+  margin-right: 10px;
 }
 
 .button-container{
@@ -58,5 +61,16 @@ input.number::-webkit-inner-spin-button {
 
 :host ::ng-deep .custom-spinner circle{
   stroke: #1976d2;
+}
+
+/*MOBILE DESIGN*/
+@media only screen and (max-width: 450px){
+  mat-form-field{
+    width: 100%;
+  }
+
+  .split-screen-input:first-child{
+    margin-right: 0;
+  }
 }
 

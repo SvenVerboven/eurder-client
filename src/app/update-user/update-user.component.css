@@ -24,6 +24,10 @@
   width: 100%;
 }
 
+.split-screen-input{
+  margin-right: 10px;
+}
+
 .update-button{
   background-color: #60a917;
   color: white;
@@ -46,4 +50,15 @@ input.number::-webkit-inner-spin-button {
 
 :host ::ng-deep .custom-spinner circle{
   stroke: #1976d2;
+}
+
+/*MOBILE DESIGN*/
+@media only screen and (max-width: 450px){
+  mat-form-field{
+    width: 100%;
+  }
+
+  .split-screen-input:first-child{
+    margin-right: 0;
+  }
 }

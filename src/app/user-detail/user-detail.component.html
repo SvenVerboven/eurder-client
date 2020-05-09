@@ -4,34 +4,34 @@
   </div>
   <form class="form-container">
     <div class="row-container">
-      <mat-form-field appearance="outline" class="split-screen-input" style="margin-right: 10px; flex-grow: 1">
+      <mat-form-field appearance="outline" class="split-screen-input" style="flex: 1">
         <mat-label>Firstname</mat-label>
         <label for="firstName">
           <input id="firstName" matInput readonly value="{{user.firstName}}">
         </label>
       </mat-form-field>
-      <mat-form-field appearance="outline" class="split-screen-input" style="flex-grow: 1">
+      <mat-form-field appearance="outline" style="flex: 1">
         <mat-label>Lastname</mat-label>
         <label for="lastName">
           <input id="lastName" matInput readonly value="{{user.lastName}}">
         </label>
       </mat-form-field>
     </div>
-    <mat-form-field appearance="outline">
+    <mat-form-field appearance="outline" class="full-screen-input">
       <mat-label>Email</mat-label>
       <label for="email">
         <input id="email" matInput readonly value="{{user.email}}">
       </label>
     </mat-form-field>
     <div class="row-container">
-      <mat-form-field appearance="outline" style="margin-right: 10px">
+      <mat-form-field appearance="outline" class="split-screen-input" style="flex: 1">
         <mat-icon matPrefix>add</mat-icon>
         <mat-label>Phone number (country code)</mat-label>
         <label for="phoneNumber-countryCode">
           <input id="phoneNumber-countryCode" matInput class="number" readonly value="{{user.phoneNumber.countryCode}}">
         </label>
       </mat-form-field>
-      <mat-form-field appearance="outline" style="flex-grow: 10">
+      <mat-form-field appearance="outline" style="flex: 8">
         <mat-label>Phone number (number)</mat-label>
         <label for="phoneNumber-number">
           <input id="phoneNumber-number" matInput class="number" readonly value="{{user.phoneNumber.number}}">
@@ -39,13 +39,13 @@
       </mat-form-field>
     </div>
     <div class="row-container">
-      <mat-form-field appearance="outline" style="margin-right: 10px; flex-grow: 3">
+      <mat-form-field appearance="outline" class="split-screen-input" style="flex: 8">
         <mat-label>Street</mat-label>
         <label for="street">
           <input id="street" matInput readonly value="{{user.address.street}}">
         </label>
       </mat-form-field>
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" style="flex: 1">
         <mat-label>Number</mat-label>
         <label for="number">
           <input id="number" matInput class="number" readonly value="{{user.address.houseNumber}}">
@@ -53,13 +53,13 @@
       </mat-form-field>
     </div>
     <div class="row-container">
-      <mat-form-field appearance="outline" style="margin-right: 10px">
+      <mat-form-field appearance="outline" class="split-screen-input" style="flex: 1">
         <mat-label>Postalcode</mat-label>
         <label for="postalcode">
           <input id="postalcode" matInput class="number" readonly value="{{user.address.zipp}}">
         </label>
       </mat-form-field>
-      <mat-form-field appearance="outline" style="flex-grow: 1">
+      <mat-form-field appearance="outline" style="flex: 3">
         <mat-label>Country</mat-label>
         <label for="country">
           <input id="country" matInput readonly value="{{user.address.country}}">
