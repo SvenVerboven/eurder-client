@@ -35,7 +35,8 @@
           <input id="phoneNumber-countryCode" matInput required type="number" class="number"
                  formControlName="countryCode">
         </label>
-        <mat-error *ngIf="userForm.get('phoneNumber.countryCode').hasError('required')">Country code is required</mat-error>
+        <mat-error *ngIf="userForm.get('phoneNumber.countryCode').hasError('required')">Country code is required
+        </mat-error>
       </mat-form-field>
       <mat-form-field appearance="outline" style="flex: 8">
         <mat-label>Phone number (number)</mat-label>
@@ -78,13 +79,17 @@
       </mat-form-field>
     </div>
     <div class="row-container">
-      <button mat-raised-button class="update-button" matTooltip="Update customer" [disabled]="userForm.invalid" (click)="updateUser()">
+      <button mat-raised-button class="update-button" matTooltip="Update customer" [disabled]="userForm.invalid"
+              (click)="updateUser()">
         update
       </button>
-      <button mat-raised-button class="cancel-button" matTooltip="Go back" (click)="goToCustomerDetails()">cancel</button>
+      <button mat-raised-button class="cancel-button" matTooltip="Go back" (click)="goToCustomerDetails()">cancel
+      </button>
     </div>
   </form>
 </div>
 <ng-template #loading>
-  <mat-spinner class="custom-spinner"></mat-spinner>
+  <div class="spinner">
+    <mat-spinner class="custom-spinner"></mat-spinner>
+  </div>
 </ng-template>
