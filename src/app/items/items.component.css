@@ -53,21 +53,43 @@ p, img {
   stroke: #1976d2;
 }
 
+.mat-card{
+  max-width: 190px
+}
+
+.mat-card-header {
+  justify-content: center;
+}
+
+.mat-card-content{
+
+}
+
+.item-img {
+  background-size: cover;
+}
+
 @media screen and (max-width: 450px) {
-  .container-item {
-    font-size: small;
+  .mat-card-title {
+  font-size: small;
   }
 
-  .container-item img {
-    height: 120px;
+  .container-item {
+    font-size: small;
+    width: 35%;
   }
 
   .container-stock-info {
     font-size: x-small;
   }
 
+  .container-item img {
+    width: 100%
+  }
+
   .container-stock-info img {
     height: 10px;
+    width: 10px;
     padding: 5px 0;
   }
 }

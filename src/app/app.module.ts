@@ -35,6 +35,7 @@ import {MatSnackBarModule} from '@angular/material/snack-bar';
 import { CartComponent } from './cart/cart.component';
 import {MatDialogModule} from '@angular/material/dialog';
 import { CartDialogComponent } from './cart-dialog/cart-dialog.component';
+import {MatCardModule} from '@angular/material/card';
 
 
 @NgModule({
@@ -55,27 +56,28 @@ import { CartDialogComponent } from './cart-dialog/cart-dialog.component';
     CartComponent,
     CartDialogComponent
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-    HttpClientModule,
-    Ng2SearchPipeModule,
-    FormsModule,
-    ReactiveFormsModule,
-    BrowserAnimationsModule,
-    MatSliderModule,
-    MatInputModule,
-    MatButtonModule,
-    MatOptionModule,
-    MatSelectModule,
-    MatIconModule,
-    MatProgressSpinnerModule,
-    MatTableModule,
-    MatTooltipModule,
-    MatMenuModule,
-    MatSnackBarModule,
-    MatDialogModule
-  ],
+    imports: [
+        BrowserModule,
+        AppRoutingModule,
+        HttpClientModule,
+        Ng2SearchPipeModule,
+        FormsModule,
+        ReactiveFormsModule,
+        BrowserAnimationsModule,
+        MatSliderModule,
+        MatInputModule,
+        MatButtonModule,
+        MatOptionModule,
+        MatSelectModule,
+        MatIconModule,
+        MatProgressSpinnerModule,
+        MatTableModule,
+        MatTooltipModule,
+        MatMenuModule,
+        MatSnackBarModule,
+        MatDialogModule,
+        MatCardModule
+    ],
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [CartDialogComponent]
