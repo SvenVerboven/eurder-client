@@ -1,4 +1,4 @@
-<div class="toolbar">
+<div id="nav" class="toolbar">
   <img alt="Order logo" src="../../assets/order.png"/>
   <button mat-button [matMenuTriggerFor]="items">Items</button>
   <mat-menu #items="matMenu">
@@ -15,4 +15,20 @@
     <mat-icon>shopping_cart</mat-icon>
   </button>
 </div>
+
+<div id="mobile-nav" class="toolbar">
+  <button mat-button [matMenuTriggerFor]="menu">
+    <mat-icon>menu</mat-icon>
+  </button>
+  <mat-menu #menu="matMenu">
+    <button mat-menu-item (click)="goToItems()">Items</button>
+    <button mat-menu-item (click)="goToCustomers()">Customers</button>
+  </mat-menu>
+  <img alt="Order logo" src="../../assets/order.png"/>
+  <button mat-button (click)="goToBasket()" matTooltip="Go to your basket">
+    <mat-icon>shopping_cart</mat-icon>
+  </button>
+</div>
+
+
 

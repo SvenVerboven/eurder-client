@@ -32,10 +32,11 @@ import {MatTableModule} from '@angular/material/table';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatMenuModule} from '@angular/material/menu';
 import {MatSnackBarModule} from '@angular/material/snack-bar';
-import { CartComponent } from './cart/cart.component';
+import {CartComponent} from './cart/cart.component';
 import {MatDialogModule} from '@angular/material/dialog';
-import { CartDialogComponent } from './cart-dialog/cart-dialog.component';
+import {CartDialogComponent} from './cart-dialog/cart-dialog.component';
 import {MatCardModule} from '@angular/material/card';
+import {MatToolbarModule} from '@angular/material/toolbar';
 
 
 @NgModule({
@@ -56,28 +57,29 @@ import {MatCardModule} from '@angular/material/card';
     CartComponent,
     CartDialogComponent
   ],
-    imports: [
-        BrowserModule,
-        AppRoutingModule,
-        HttpClientModule,
-        Ng2SearchPipeModule,
-        FormsModule,
-        ReactiveFormsModule,
-        BrowserAnimationsModule,
-        MatSliderModule,
-        MatInputModule,
-        MatButtonModule,
-        MatOptionModule,
-        MatSelectModule,
-        MatIconModule,
-        MatProgressSpinnerModule,
-        MatTableModule,
-        MatTooltipModule,
-        MatMenuModule,
-        MatSnackBarModule,
-        MatDialogModule,
-        MatCardModule
-    ],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    Ng2SearchPipeModule,
+    FormsModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    MatSliderModule,
+    MatInputModule,
+    MatButtonModule,
+    MatOptionModule,
+    MatSelectModule,
+    MatIconModule,
+    MatProgressSpinnerModule,
+    MatTableModule,
+    MatTooltipModule,
+    MatMenuModule,
+    MatSnackBarModule,
+    MatDialogModule,
+    MatCardModule,
+    MatToolbarModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
   entryComponents: [CartDialogComponent]

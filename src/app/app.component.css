@@ -1,21 +1,9 @@
 .container{
-  margin-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
-app-bottom-bar{
-  position: fixed;
-  left: 0;
-  bottom: 0;
-  height: 100px;
-  width: 100%;
-  background-color: #1976d2;
-  color: white;
-  text-align: center;
-}
-
-@media screen and (max-width: 450px) {
-
-  app-bottom-bar {
-    visibility: hidden;
-  }
+.spacer{
+  flex: 1 1 auto;
 }
