@@ -25,3 +25,10 @@ body {
   align-items: center;
   margin-top: 20%;
 }
+
+a, a:link, a:visited, a:hover, a:active{
+  text-decoration: none;
+  color: black;
+}
+
+
