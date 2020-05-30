@@ -21,10 +21,29 @@
     <mat-icon>menu</mat-icon>
   </button>
   <mat-menu #menu="matMenu">
-    <button mat-menu-item (click)="goToItems()">Items</button>
-    <button mat-menu-item (click)="goToCustomers()">Customers</button>
+    <button mat-menu-item [matMenuTriggerFor]="itemsSubMenu">
+      <mat-icon>point_of_sale</mat-icon>
+      <span>Items</span>
+    </button>
+    <button mat-menu-item [matMenuTriggerFor]="customersSubMenu">
+      <mat-icon>person</mat-icon>
+      <span>Customers</span>
+    </button>
   </mat-menu>
+
+  <mat-menu #itemsSubMenu>
+    <button mat-menu-item (click)="goToItems()">view items</button>
+    <button mat-menu-item (click)="goToCreateItem()">create item</button>
+  </mat-menu>
+
+  <mat-menu #customersSubMenu>
+    <button mat-menu-item (click)="goToCustomers()">view customers</button>
+    <button mat-menu-item (click)="goToCreateCustomer()">create customer</button>
+  </mat-menu>
+
+  <span class="example-spacer"></span>
   <img alt="Order logo" src="../../assets/order.png"/>
+  <span class="example-spacer"></span>
   <button mat-button (click)="goToBasket()" matTooltip="Go to your basket">
     <mat-icon>shopping_cart</mat-icon>
   </button>
