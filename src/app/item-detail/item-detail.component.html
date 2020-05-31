@@ -7,28 +7,20 @@
   <form class="form-container">
     <mat-form-field appearance="outline" class="full-screen-input">
       <mat-label>Name</mat-label>
-      <label for="name">
         <input id="name" matInput readonly value="{{item.name}}">
-      </label>
     </mat-form-field>
     <mat-form-field appearance="outline" class="full-screen-input">
       <mat-label>Description</mat-label>
-      <label for="description">
         <textarea id="description" matInput readonly>{{item.description}}</textarea>
-      </label>
     </mat-form-field>
-    <mat-icon>euro</mat-icon>
     <mat-form-field appearance="outline" class="margin-right">
       <mat-label>Price</mat-label>
-      <label for="price">
         <input id="price" matInput type="number" class="right-align" readonly value="{{item.price}}">
-      </label>
+        <span matPrefix><mat-icon>euro</mat-icon></span>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Amount of stock</mat-label>
-      <label for="stockAmount">
         <input id="stockAmount" matInput type="number" class="right-align" readonly value="{{item.stockAmount}}">
-      </label>
     </mat-form-field>
     <div class="button-container">
       <button mat-raised-button class="basket-button" matTooltip="Add item to your basket" (click)="addToCart()">add to

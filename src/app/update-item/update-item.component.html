@@ -5,35 +5,27 @@
   <form [formGroup]="itemForm" class="form-container">
     <mat-form-field appearance="outline" class="full-screen-input">
       <mat-label>Name</mat-label>
-      <label for="name">
         <input id="name" matInput required formControlName="name">
-      </label>
       <mat-error *ngIf="itemForm.get('name').hasError('required')">Name is required</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline" class="full-screen-input">
       <mat-label>Description</mat-label>
-      <label for="description">
         <textarea id="description" matInput required formControlName="description" #input></textarea>
-      </label>
       <mat-hint align="end" *ngIf="input.value?.length < 255">{{255 - input.value?.length}}/255</mat-hint>
       <mat-hint align="end" *ngIf="input.value?.length >= 255" class="red-hint">0/255</mat-hint>
       <mat-error *ngIf="itemForm.get('description').hasError('required')">Description is required</mat-error>
       <mat-error *ngIf="itemForm.get('description').hasError('maxlength')">Max characters allowed is 255</mat-error>
     </mat-form-field>
-    <mat-icon>euro</mat-icon>
     <mat-form-field appearance="outline" class="margin-right">
       <mat-label>Price</mat-label>
-      <label for="price">
         <input id="price" matInput type="number" class="right-align" required formControlName="price">
-      </label>
+        <span matPrefix><mat-icon>euro</mat-icon></span>
       <mat-error *ngIf="itemForm.get('price').hasError('required')">Price is required</mat-error>
       <mat-error *ngIf="itemForm.get('price').hasError('min')">Price must be minimal 0</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Amount of stock</mat-label>
-      <label for="stockAmount">
         <input id="stockAmount" matInput type="number" class="right-align" required formControlName="stockAmount">
-      </label>
       <mat-error *ngIf="itemForm.get('stockAmount').hasError('required')">Stock amount is required</mat-error>
       <mat-error *ngIf="itemForm.get('stockAmount').hasError('min')">Stock amount must be minimal 0</mat-error>
     </mat-form-field>
