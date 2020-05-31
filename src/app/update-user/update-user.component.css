@@ -20,12 +20,8 @@
   flex-wrap: wrap;
 }
 
-.full-screen-input{
-  width: 100%;
-}
-
-.split-screen-input{
-  margin-right: 10px;
+.mat-form-field{
+  flex: 1;
 }
 
 .update-button{
@@ -62,3 +58,18 @@ input.number::-webkit-inner-spin-button {
     margin-right: 0;
   }
 }
+
+@media only screen and (min-width: 451px){
+  .row-container .mat-form-field:first-child{
+    margin: 0 5px 0 0;
+  }
+
+  #form-field-phonenumber{
+    flex: 5;
+  }
+
+  #form-field-street{
+    flex: 5;
+  }
+}
+

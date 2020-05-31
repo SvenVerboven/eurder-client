@@ -30,14 +30,14 @@
         <mat-error *ngIf="userForm.get('phoneNumber.countryCode').hasError('required')">Country code is required
         </mat-error>
       </mat-form-field>
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" id="form-field-phonenumber">
         <mat-label>Phone number (number)</mat-label>
           <input id="phoneNumber-number" matInput required type="number" class="number" formControlName="number">
         <mat-error *ngIf="userForm.get('phoneNumber.number').hasError('required')">Phone number is required</mat-error>
       </mat-form-field>
     </div>
     <div class="row-container" formGroupName="address">
-      <mat-form-field appearance="outline">
+      <mat-form-field appearance="outline" id="form-field-street">
         <mat-label>Street</mat-label>
           <input id="street" matInput required type="text" formControlName="street">
         <mat-error *ngIf="userForm.get('address.street').hasError('required')">Street name is required</mat-error>
