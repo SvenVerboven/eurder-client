@@ -27,21 +27,9 @@ h1{
   margin-right: 20px;
 }
 
-input.right-align::-webkit-outer-spin-button,
-input.right-align::-webkit-inner-spin-button {
-  display: none;
-}
-
 input.right-align {
   -moz-appearance: textfield;
   text-align: right;
-}
-
-.button-container{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap
 }
 
 button{
@@ -51,12 +39,10 @@ button{
 .edit-button{
   background-color: #1976d2;
   color: #f1f1f1;
-  flex-grow: 1;
 }
 
 .back-button{
   background-color: whitesmoke;
-  margin-left: 10px;
 }
 
 .basket-button{
@@ -66,4 +52,33 @@ button{
 
 :host ::ng-deep .custom-spinner circle{
   stroke: #1976d2;
+}
+
+@media screen and (max-width: 450px) {
+  mat-form-field{
+    width: 100%;
+  }
+
+  .button-container{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .button-container button{
+    margin: 0 0 10px 0;
+  }
+}
+
+@media screen and (min-width: 451px) {
+  .button-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap
+  }
+
+  .edit-button{
+    margin: 0 10px 0 0;
+  }
 }
