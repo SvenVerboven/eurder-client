@@ -1,5 +1,5 @@
+<!--pc nav-bar-->
 <div id="nav" class="toolbar">
-  <img alt="Order logo" src="../../assets/order.png"/>
   <button mat-button [matMenuTriggerFor]="items">Items</button>
   <mat-menu #items="matMenu">
     <button mat-menu-item (click)="goToItems()">view items</button>
@@ -11,11 +11,15 @@
     <button mat-menu-item (click)="goToCreateCustomer()">create customer</button>
   </mat-menu>
   <span class="example-spacer"></span>
+  <img alt="Order logo" src="../../assets/order.png"/>
+  <span class="example-spacer"></span>
   <button mat-button (click)="goToBasket()" matTooltip="Go to your basket">
     <mat-icon>shopping_cart</mat-icon>
+    <span>Shopping basket</span>
   </button>
 </div>
 
+<!--mobile nav-bar-->
 <div id="mobile-nav" class="toolbar">
   <button mat-button [matMenuTriggerFor]="menu">
     <mat-icon>menu</mat-icon>
