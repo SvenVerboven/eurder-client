@@ -36,10 +36,6 @@ p, img {
   margin-bottom: 5px;
 }
 
-.router-links {
-  cursor: pointer;
-}
-
 :host ::ng-deep .custom-spinner circle {
   stroke: #1976d2;
 }

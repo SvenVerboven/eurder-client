@@ -9,16 +9,16 @@
     </mat-form-field>
   </div>
   <div class="container-items" *ngIf="items; else loading">
-    <mat-card class="container-item" *ngFor="let item of items | filterByItemName:searchText">
+    <mat-card class="container-item" *ngFor="let item of items | filterByItemName:searchText" routerLink="{{item.id}}">
       <mat-card-header>
-        <mat-card-title routerLink="{{item.id}}" class="router-links">{{item.name}}</mat-card-title>
+        <mat-card-title>{{item.name}}</mat-card-title>
       </mat-card-header>
-      <img class="item-img" routerLink="{{item.id}}" alt="item placeholder" src="../../assets/item-placeholder.jpg"
-           class="router-links"/>
+      <img class="item-img" alt="item placeholder" src="../../assets/item-placeholder.jpg"/>
       <mat-card-content class="container-stock-info">
         <p>Price: <span>{{item.price | currency:'EUR'}}</span></p>
         <span style="flex: 1 1 auto"></span>
-        <p style="margin-right: 5px">{{item.urgencyIndicator | slice:item.urgencyIndicator.indexOf('_') + 1:item.urgencyIndicator.length}}</p>
+        <p
+          style="margin-right: 5px">{{item.urgencyIndicator | slice:item.urgencyIndicator.indexOf('_') + 1:item.urgencyIndicator.length}}</p>
         <img alt="urgency indicator stock" src="../../assets/{{item.urgencyIndicator}}.png">
       </mat-card-content>
     </mat-card>
