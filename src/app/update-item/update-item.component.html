@@ -1,6 +1,6 @@
 <div class="container" *ngIf="itemForm ; else loading">
   <div class="header-container">
-    <h1>Item <span class="header-information">{{itemForm.get('id').value}}</span></h1>
+    <h1>Item <span>{{itemForm.get('id').value}}</span></h1>
   </div>
   <form [formGroup]="itemForm" class="form-container">
     <mat-form-field appearance="outline" class="full-screen-input">

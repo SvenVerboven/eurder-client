@@ -14,10 +14,6 @@ h1{
   margin: 0;
 }
 
-.header-information{
-  color: dimgrey;
-}
-
 .full-screen-input{
   width: 100%;
 }
@@ -30,7 +26,6 @@ input.right-align::-webkit-outer-spin-button,
 input.right-align::-webkit-inner-spin-button {
   display: none;
 }
-
 
 input.right-align {
   -moz-appearance: textfield;
@@ -64,6 +59,13 @@ button{
 
 :host ::ng-deep .custom-spinner circle{
   stroke: #1976d2;
+}
+
+/*MOBILE DESIGN*/
+@media only screen and (max-width: 450px){
+  mat-form-field{
+    width: 100%;
+  }
 }
 
 
