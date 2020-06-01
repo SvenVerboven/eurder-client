@@ -1,6 +1,6 @@
 <div class="container" *ngIf="item; else loading">
   <div class="header-container">
-    <h1>Item <span class="header-information">{{item.id}}</span></h1>
+    <h1>Item <span>{{item.id}}</span></h1>
     <button mat-raised-button class="basket-button" matTooltip="Go to your basket" (click)="goToBasket()">view basket
     </button>
   </div>
@@ -26,7 +26,7 @@
       <button mat-raised-button class="basket-button" matTooltip="Add item to your basket" (click)="addToCart()">add to
         basket
       </button>
-      <span style="flex-grow: 2"></span>
+      <div class="spacer"></div>
       <button mat-raised-button class="edit-button" matTooltip="Edit item" (click)="goToUpdateItem()">edit</button>
       <button mat-raised-button class="back-button" matTooltip="Go back" (click)="goToItems()">back</button>
     </div>
