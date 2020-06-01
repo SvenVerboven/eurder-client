@@ -50,34 +50,25 @@ button{
   stroke: #1976d2;
 }
 
+.button-container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap
+}
+
+.spacer{
+  flex: 1 1 auto;
+}
+
+.edit-button{
+  margin: 0 10px 0 0;
+}
+
 @media screen and (max-width: 450px) {
   mat-form-field{
     width: 100%;
   }
-
-  .button-container{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-  }
-
-  .button-container button{
-    margin: 0 0 10px 0;
-  }
 }
 
 @media screen and (min-width: 451px) {
-  .button-container{
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap
-  }
-
-  .edit-button{
-    margin: 0 10px 0 0;
-  }
-
-  .spacer{
-    flex: 1 1 auto;
-  }
 }
