@@ -20,8 +20,8 @@
       <mat-icon matPrefix>euro</mat-icon>
       <mat-label>Price</mat-label>
         <input id="price" matInput type="number" class="right-align" formControlName="price">
-<!--      <mat-error *ngIf="itemForm.get('price').hasError('required')">Price is required</mat-error>-->
-<!--      <mat-error *ngIf="itemForm.get('price').hasError('min')">Price must be minimal 0</mat-error>-->
+      <mat-error *ngIf="itemForm.get('price').hasError('required')">Price is required</mat-error>
+      <mat-error *ngIf="itemForm.get('price').hasError('min')">Price must be minimal 0</mat-error>
     </mat-form-field>
     <mat-form-field appearance="outline">
       <mat-label>Amount of stock</mat-label>
