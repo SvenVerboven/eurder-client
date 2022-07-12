@@ -1,11 +1,65 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19899f58-a418-4f3c-94c4-cfef4574d4f5" name="Changes" comment="Clean up project" />
+    <list default="true" id="19899f58-a418-4f3c-94c4-cfef4574d4f5" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/.browserslistrc" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/.editorconfig" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/.vscode/extensions.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/.vscode/tasks.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/angular.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/karma.conf.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/app/app-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/app/app.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/app/app.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/app/app.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/app/app.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/app/app.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/app/survey/components/create-person/create-person.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/app/survey/components/create-person/create-person.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/app/survey/components/create-person/create-person.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/app/survey/components/create-person/create-person.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/app/survey/components/header/header.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/app/survey/components/header/header.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/app/survey/components/header/header.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/app/survey/components/header/header.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/app/survey/survey-routing.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/app/survey/survey.module.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/app/survey/survey/survey.component.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/app/survey/survey/survey.component.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/app/survey/survey/survey.component.spec.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/app/survey/survey/survey.component.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/assets/.gitkeep" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/environments/environment.prod.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/environments/environment.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/main.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/polyfills.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/styles.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/src/test.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/tsconfig.app.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/tsconfig.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/eurder/tsconfig.spec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Pull.Settings">
+    <option name="OPTIONS">
+      <set>
+        <option value="REBASE" />
+      </set>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,7 +110,7 @@
       <method v="2" />
     </configuration>
     <configuration name="Angular CLI Server" type="js.build_tools.npm">
-      <package-json value="$PROJECT_DIR$/eurder/package.json" />
+      <package-json value="$PROJECT_DIR$/package.json" />
       <command value="run" />
       <scripts>
         <script value="start" />
