@@ -1,0 +1,25 @@
+<div *ngIf="surveySubjects" class="container">
+  <p-card header="U proeft nu {{ surveySubjects[surveySubjectSequence].name }}">
+    <h3>
+      {{ surveySubjects[surveySubjectSequence].questions[questionSequence].text }}
+    </h3>
+    <p-rating [(ngModel)]="score"></p-rating>
+    <p-divider></p-divider>
+    <div class="info-container">
+      <div class="text-right">Steak {{ surveySubjectSequence + 1 }}/{{ surveySubjects.length }}</div>
+      <div class="text-right">
+        Vraag {{ questionSequence + 1 }}/{{ surveySubjects[surveySubjectSequence].questions.length }}
+      </div>
+    </div>
+    <p-divider></p-divider>
+    <div class="button-container">
+      <button
+        class="submit-button"
+        pButton
+        type="submit"
+        [label]="nextQuestionAvailable ? labelNext : labelSubmit"
+        (click)="onNext(surveySubjects[surveySubjectSequence], surveySubjects[surveySubjectSequence].questions[questionSequence])"
+      ></button>
+    </div>
+  </p-card>
+</div>

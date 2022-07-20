@@ -1,19 +1,20 @@
-import {Injectable} from '@angular/core';
-import {Person} from '@angular/cli/utilities/package-json';
-import {HttpClient} from '@angular/common/http';
-import {Observable} from 'rxjs';
+import { Observable } from 'rxjs';
 
-const BASE_URL = 'http://localhost:8080';
+import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
+
+import { Person } from '../models/person.model';
+import { environment } from '../../../environments/environment.prod';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class PersonHttpService {
-
-  constructor(private readonly http: HttpClient) {
-  }
+  constructor(private readonly http: HttpClient) {}
 
   save(person: Person): Observable<Person> {
-    return this.http.post<Person>(`${BASE_URL}/persons`, person);
+    return this.http.post<Person>(`${environment.url.baseUrl}/persons`, person);
+    // TODO remove
+    // return of(person);
   }
 }

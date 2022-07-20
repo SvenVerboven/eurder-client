@@ -1,6 +1,6 @@
 import {ChangeDetectionStrategy, Component, Output, EventEmitter} from '@angular/core';
 import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {Person} from '@angular/cli/utilities/package-json';
+import {Person} from "../../models/person.model";
 
 @Component({
   selector: 'app-create-person',
@@ -9,11 +9,11 @@ import {Person} from '@angular/cli/utilities/package-json';
   changeDetection: ChangeDetectionStrategy.OnPush
 })
 export class CreatePersonComponent {
+  @Output() savePersonRequested = new EventEmitter<Person>();
   labelName = 'Geef je naam in';
   labelButton = 'Bevestig';
   errorMessageName = 'Naam is verplicht';
   personForm: FormGroup;
-  @Output() savePersonRequested = new EventEmitter<Person>();
 
   constructor(private readonly fb: FormBuilder) {
     this.personForm = fb.group(
@@ -28,12 +28,8 @@ export class CreatePersonComponent {
 
   savePerson(): void {
     this.personForm.get('name')?.markAsDirty();
-    console.log(`Clicked on submit`);
     if (this.personForm.valid) {
-      this.savePersonRequested?.emit(this.personForm.value);
-      console.log('the form is valid');
-      return;
+      this.savePersonRequested.emit(this.personForm.value);
     }
-    console.log('the form is invalid');
   }
 }

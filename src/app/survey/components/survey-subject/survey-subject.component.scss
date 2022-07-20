@@ -1,0 +1,28 @@
+.container {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 1rem 0rem 1rem;
+}
+
+.answer-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+
+.info-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+}
+
+.submit-button {
+  width: 100%;
+}
