@@ -1,44 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19899f58-a418-4f3c-94c4-cfef4574d4f5" name="Changes" comment="Feature:  survey dashboard.">
-      <change afterPath="$PROJECT_DIR$/src/app/survey/components/survey-dashboard/survey-dashboard.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/survey/components/survey-dashboard/survey-dashboard.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/survey/components/survey-dashboard/survey-dashboard.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/survey/components/survey-dashboard/survey-dashboard.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/survey/components/title/title.component.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/survey/components/title/title.component.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/survey/components/title/title.component.spec.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/survey/components/title/title.component.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/app/survey/utils/survey-mapper.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/survey/components/create-person/create-person.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/components/create-person/create-person.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/survey/components/create-person/create-person.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/components/create-person/create-person.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/survey/components/create-person/create-person.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/components/create-person/create-person.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/survey/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/survey/components/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/survey/components/header/header.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/survey/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/survey/containers/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/containers/dashboard/dashboard.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/survey/containers/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/containers/dashboard/dashboard.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/survey/containers/survey/survey.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/containers/survey/survey.component.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/survey/containers/survey/survey.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/containers/survey/survey.component.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/survey/models/answer.model.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/survey/models/question.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/models/question.model.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/survey/services/person-http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/services/person-http.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/survey/services/survey-http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/services/survey-http.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/survey/services/survey-subject-http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/services/survey-subject-http.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/survey/survey.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/survey.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/app/testing/testing-utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/testing/testing-utils.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.prod.ts" afterDir="false" />
-    </list>
+    <list default="true" id="19899f58-a418-4f3c-94c4-cfef4574d4f5" name="Changes" comment="Feature:  survey dashboard." />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -170,7 +133,7 @@
       <workItem from="1658065601434" duration="9357000" />
       <workItem from="1658239301147" duration="3374000" />
       <workItem from="1658332661248" duration="2827000" />
-      <workItem from="1658412616165" duration="14034000" />
+      <workItem from="1658412616165" duration="14413000" />
     </task>
     <task id="LOCAL-00001" summary="Clean up project">
       <created>1657477473754</created>
@@ -242,7 +205,14 @@
       <option name="project" value="LOCAL" />
       <updated>1658332861327</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Feature:  survey dashboard.">
+      <created>1658567687990</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1658567687990</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
