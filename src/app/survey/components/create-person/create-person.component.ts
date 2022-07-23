@@ -1,12 +1,12 @@
-import {ChangeDetectionStrategy, Component, Output, EventEmitter} from '@angular/core';
-import {FormBuilder, FormGroup, Validators} from '@angular/forms';
-import {Person} from "../../models/person.model";
+import { ChangeDetectionStrategy, Component, Output, EventEmitter } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Person } from '../../models/person.model';
 
 @Component({
   selector: 'app-create-person',
   templateUrl: './create-person.component.html',
   styleUrls: ['./create-person.component.scss'],
-  changeDetection: ChangeDetectionStrategy.OnPush
+  changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class CreatePersonComponent {
   @Output() savePersonRequested = new EventEmitter<Person>();
@@ -21,8 +21,8 @@ export class CreatePersonComponent {
         name: ['', [Validators.required]],
       },
       {
-        updateOn: 'submit'
-      }
+        updateOn: 'submit',
+      },
     );
   }
 

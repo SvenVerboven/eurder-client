@@ -1,12 +1,16 @@
-<form class="container" [formGroup]="personForm" (ngSubmit)="savePerson()">
-  <label class="mb-2" for="name">{{ labelName }}</label>
-  <input type="userName" pInputText formControlName="name" id="name" />
-  <div class="error-container">
-    <small
-      *ngIf="personForm.get('name')?.invalid && (personForm.get('name')?.touched || personForm.get('name')?.dirty)"
-      class="p-error block mb-2"
-      >{{ errorMessageName }}</small
-    >
-  </div>
-  <button class="mb-8" pButton type="submit" [label]="labelButton"></button>
-</form>
+<div class="container">
+  <p-card>
+    <form class="form-container" [formGroup]="personForm" (ngSubmit)="savePerson()">
+      <label class="mb-2" for="name">{{ labelName }}</label>
+      <input type="userName" pInputText formControlName="name" id="name"/>
+      <div class="field-error-container">
+        <small
+          *ngIf="personForm.get('name')?.invalid && (personForm.get('name')?.touched || personForm.get('name')?.dirty)"
+          class="p-error block mb-2"
+        >{{ errorMessageName }}</small
+        >
+      </div>
+      <button pButton type="submit" [label]="labelButton"></button>
+    </form>
+  </p-card>
+</div>

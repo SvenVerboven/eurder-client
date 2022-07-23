@@ -1,11 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="19899f58-a418-4f3c-94c4-cfef4574d4f5" name="Changes" comment="Added Express for Heroku.">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="19899f58-a418-4f3c-94c4-cfef4574d4f5" name="Changes" comment="Feature:  survey dashboard.">
+      <change afterPath="$PROJECT_DIR$/src/app/survey/components/survey-dashboard/survey-dashboard.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/survey/components/survey-dashboard/survey-dashboard.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/survey/components/survey-dashboard/survey-dashboard.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/survey/components/survey-dashboard/survey-dashboard.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/survey/components/title/title.component.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/survey/components/title/title.component.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/survey/components/title/title.component.spec.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/survey/components/title/title.component.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/app/survey/utils/survey-mapper.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/angular.json" beforeDir="false" afterPath="$PROJECT_DIR$/angular.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/survey/components/create-person/create-person.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/components/create-person/create-person.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/survey/components/create-person/create-person.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/components/create-person/create-person.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/survey/components/create-person/create-person.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/components/create-person/create-person.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/survey/components/header/header.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/survey/components/header/header.component.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/survey/components/header/header.component.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/survey/components/header/header.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/components/header/header.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/survey/containers/dashboard/dashboard.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/containers/dashboard/dashboard.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/survey/containers/dashboard/dashboard.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/containers/dashboard/dashboard.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/survey/containers/survey/survey.component.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/containers/survey/survey.component.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/survey/containers/survey/survey.component.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/containers/survey/survey.component.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/survey/models/answer.model.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/survey/models/question.model.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/models/question.model.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/survey/services/person-http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/services/person-http.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/survey/services/survey-http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/services/survey-http.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/survey/services/survey-subject-http.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/services/survey-subject-http.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/survey/survey.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/survey/survey.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/app/testing/testing-utils.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/app/testing/testing-utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/environments/environment.prod.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.prod.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/environments/environment.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/environments/environment.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,10 +96,11 @@
       <recent name="$PROJECT_DIR$/src/app/survey" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/components" />
       <recent name="$PROJECT_DIR$/src/app/survey/containers/survey" />
     </key>
   </component>
-  <component name="RunManager" selected="npm.Angular CLI Server">
+  <component name="RunManager" selected="npm.build">
     <configuration name="E2E Tests (eurder-client)" type="JavaScriptTestRunnerProtractor">
       <config-file value="$PROJECT_DIR$/e2e/protractor.conf.js" />
       <node-interpreter value="project" />
@@ -90,6 +123,32 @@
       <envs />
       <method v="2" />
     </configuration>
+    <configuration name="build" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="build" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <configuration name="ng" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
+      <package-json value="$PROJECT_DIR$/package.json" />
+      <command value="run" />
+      <scripts>
+        <script value="ng" />
+      </scripts>
+      <node-interpreter value="project" />
+      <envs />
+      <method v="2" />
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="npm.build" />
+        <item itemvalue="npm.ng" />
+      </list>
+    </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
@@ -110,7 +169,8 @@
       <workItem from="1657873077720" duration="900000" />
       <workItem from="1658065601434" duration="9357000" />
       <workItem from="1658239301147" duration="3374000" />
-      <workItem from="1658332661248" duration="169000" />
+      <workItem from="1658332661248" duration="2827000" />
+      <workItem from="1658412616165" duration="14034000" />
     </task>
     <task id="LOCAL-00001" summary="Clean up project">
       <created>1657477473754</created>
@@ -175,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1657649009192</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Added production domain url.">
+      <created>1658332861327</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1658332861327</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -196,18 +263,9 @@
     <MESSAGE value="Clean up project" />
     <MESSAGE value="Merged remote master branch." />
     <MESSAGE value="Feature survey." />
-    <option name="LAST_COMMIT_MESSAGE" value="Feature survey." />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/app/survey/services/survey-http.service.ts</url>
-          <line>15</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="Added production domain url." />
+    <MESSAGE value="Feature:  survey dashboard." />
+    <option name="LAST_COMMIT_MESSAGE" value="Feature:  survey dashboard." />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

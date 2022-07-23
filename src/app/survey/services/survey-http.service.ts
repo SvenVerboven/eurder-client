@@ -15,4 +15,8 @@ export class SurveyHttpService {
   save(survey: Survey): Observable<Survey> {
     return this.http.post<Survey>(`${environment.url.baseUrl}/surveys`, survey);
   }
+
+  findAll(): Observable<Survey[]> {
+    return this.http.get<Survey[]>(`${environment.url.baseUrl}/surveys`);
+  }
 }

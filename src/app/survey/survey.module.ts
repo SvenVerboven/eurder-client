@@ -8,25 +8,29 @@ import { InputTextModule } from 'primeng/inputtext';
 import { BlockUIModule } from 'primeng/blockui';
 import { RadioButtonModule } from 'primeng/radiobutton';
 import { DividerModule } from 'primeng/divider';
+import { CardModule } from 'primeng/card';
+import { RatingModule } from 'primeng/rating';
 
 import { SurveyRoutingModule } from './survey-routing.module';
-import { HeaderComponent } from './components/header/header.component';
 import { CreatePersonComponent } from './components/create-person/create-person.component';
 import { SurveyComponent } from './containers/survey/survey.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 import { SurveySubjectComponent } from './components/survey-subject/survey-subject.component';
 import { DashboardComponent } from './containers/dashboard/dashboard.component';
-import { RatingModule } from 'primeng/rating';
-import { CardModule } from 'primeng/card';
+import { SurveyDashboardComponent } from './components/survey-dashboard/survey-dashboard.component';
+import { ChartModule } from 'primeng/chart';
+import { TitleComponent } from './components/title/title.component';
 
 @NgModule({
   declarations: [
-    HeaderComponent,
     CreatePersonComponent,
     SurveyComponent,
     SpinnerComponent,
     SurveySubjectComponent,
     DashboardComponent,
+    SurveyDashboardComponent,
+    TitleComponent,
+    TitleComponent,
   ],
   imports: [
     CommonModule,
@@ -41,6 +45,7 @@ import { CardModule } from 'primeng/card';
     DividerModule,
     RatingModule,
     CardModule,
+    ChartModule,
   ],
 })
 export class SurveyModule {}

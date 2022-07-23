@@ -1,1 +1,5 @@
-<p>dashboard works!</p>
+<div *ngIf="surveys$ | async">
+  <app-title [title]="title"></app-title>
+  <app-survey-dashboard [data]="data"></app-survey-dashboard>
+</div>
+<app-spinner *ngIf="loading$ | async as loading" [loading]="loading"></app-spinner>

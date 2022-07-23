@@ -1,11 +1,12 @@
 .container {
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  padding: 0 4rem
+  padding: 0 1rem;
 }
 
-.error-container {
+.form-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.field-error-container {
   height: 23px;
 }
