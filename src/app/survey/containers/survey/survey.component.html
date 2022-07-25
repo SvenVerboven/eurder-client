@@ -2,4 +2,13 @@
                    (savePersonRequested)="onSavePersonRequested($event)"></app-create-person>
 <app-survey-subject *ngIf="surveySubjects$ | async as surveySubjects" [surveySubjects]="surveySubjects"
                     (onSaveSurvey)="onSaveSurveyRequested($event)"></app-survey-subject>
+<p-confirmDialog class="dialog" #cd [style]="{width: '90vw'}">
+  <ng-template pTemplate="header">
+    <div class="dialog-header">Bevestigen scores</div>
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <button type="button" pButton icon="pi pi-times" label="Nee" (click)="cd.reject()"></button>
+    <button type="button" pButton icon="pi pi-check" label="Ja" (click)="cd.accept()"></button>
+  </ng-template>
+</p-confirmDialog>
 <app-spinner *ngIf="loading$ | async as loading" [loading]=loading></app-spinner>

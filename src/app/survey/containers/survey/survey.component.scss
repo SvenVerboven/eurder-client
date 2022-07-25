@@ -1,0 +1,16 @@
+:host::ng-deep .dialog .p-dialog .p-dialog-content {
+  padding: 1rem 1.5rem;
+}
+
+:host::ng-deep .dialog .p-dialog.p-confirm-dialog .p-confirm-dialog-message {
+  margin: 0;
+}
+
+:host::ng-deep .dialog .p-dialog .p-dialog-footer {
+  padding: 1rem 1.5rem;
+}
+
+.dialog-header {
+  font-size: larger;
+  font-weight: 800;
+}

@@ -1,5 +1,9 @@
-<div *ngIf="surveys$ | async">
-  <app-title [title]="title"></app-title>
-  <app-survey-dashboard [data]="data"></app-survey-dashboard>
+<div class="container" *ngIf="surveys$ | async as surveys">
+  <app-survey-dashboard
+    [data]="data"
+    [surveys]="surveys"
+    [title]="title"
+    (refreshSurveysRequested)="onRefreshSurveysRequested($event)"
+  ></app-survey-dashboard>
 </div>
 <app-spinner *ngIf="loading$ | async as loading" [loading]="loading"></app-spinner>

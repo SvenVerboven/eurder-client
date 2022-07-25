@@ -20,6 +20,8 @@ import { DashboardComponent } from './containers/dashboard/dashboard.component';
 import { SurveyDashboardComponent } from './components/survey-dashboard/survey-dashboard.component';
 import { ChartModule } from 'primeng/chart';
 import { TitleComponent } from './components/title/title.component';
+import { DialogModule } from 'primeng/dialog';
+import { ConfirmDialogModule } from 'primeng/confirmdialog';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { TitleComponent } from './components/title/title.component';
     RatingModule,
     CardModule,
     ChartModule,
+    DialogModule,
+    ConfirmDialogModule,
   ],
 })
 export class SurveyModule {}

@@ -1,1 +1,6 @@
+<app-title [title]="title"></app-title>
 <p-chart type="doughnut" [data]="data"></p-chart>
+<p-divider></p-divider>
+<div>Totaal aantal enquetes ingediend: {{ surveys.length }}</div>
+<p-divider></p-divider>
+<button pButton icon="pi pi-refresh" [label]="label" (click)="onRefreshSurveys()"></button>

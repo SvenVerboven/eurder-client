@@ -2,7 +2,7 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  padding: 1rem 1rem 0rem 1rem;
+  padding: 0 1rem;
 }
 
 .answer-container {
@@ -21,8 +21,9 @@
 .button-container {
   display: flex;
   flex-direction: row;
-}
+  justify-content: space-between;
 
-.submit-button {
-  width: 100%;
+  & button {
+    width: 45%;
+  }
 }

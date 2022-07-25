@@ -14,11 +14,22 @@
     <p-divider></p-divider>
     <div class="button-container">
       <button
-        class="submit-button"
+        [disabled]="!previousQuestionAvailable"
+        pButton
+        type="button"
+        [label]="labelBack"
+        (click)="onBack()"
+      ></button>
+      <button
         pButton
         type="submit"
-        [label]="nextQuestionAvailable ? labelNext : labelSubmit"
-        (click)="onNext(surveySubjects[surveySubjectSequence], surveySubjects[surveySubjectSequence].questions[questionSequence])"
+        [label]="nextQuestionAvailable || nextSurveySubjectAvailable ? labelNext : labelSubmit"
+        (click)="
+          onNext(
+            surveySubjects[surveySubjectSequence],
+            surveySubjects[surveySubjectSequence].questions[questionSequence]
+          )
+        "
       ></button>
     </div>
   </p-card>

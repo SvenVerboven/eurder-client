@@ -14,7 +14,7 @@ import {
 import { ChangeDetectionStrategy, Component, OnDestroy, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 
-import { MessageService } from 'primeng/api';
+import { ConfirmationService, MessageService } from 'primeng/api';
 
 import { PersonHttpService } from '../../services/person-http.service';
 import { Person } from '../../models/person.model';
@@ -46,6 +46,7 @@ export class SurveyComponent implements OnInit, OnDestroy {
     private readonly surveyHttpService: SurveyHttpService,
     private readonly router: Router,
     private readonly messageService: MessageService,
+    private readonly confirmationService: ConfirmationService,
   ) {
     this.person$ = this.savePersonAction$.pipe(
       tap(() => this.loading$.next(true)),
@@ -110,7 +111,12 @@ export class SurveyComponent implements OnInit, OnDestroy {
   }
 
   onSaveSurveyRequested(scores: Score[]): void {
-    this.saveSurveyAction$.next(scores);
+    this.confirmationService.confirm({
+      message: 'Ben je zeker dat je uw gegevens wilt bevestigen?',
+      accept: () => {
+        this.saveSurveyAction$.next(scores);
+      },
+    });
   }
 
   private handleError(): void {

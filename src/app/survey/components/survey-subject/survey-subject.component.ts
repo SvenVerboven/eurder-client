@@ -1,12 +1,8 @@
-import { Subject, takeUntil } from 'rxjs';
-
-import { ChangeDetectionStrategy, Component, EventEmitter, Input, OnDestroy, Output } from '@angular/core';
-import { Router } from '@angular/router';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
 
 import { SurveySubject } from '../../models/survey-subject.model';
 import { Score } from '../../models/score.model';
 import { Question } from '../../models/question.model';
-import { SurveyHttpService } from '../../services/survey-http.service';
 
 @Component({
   selector: 'app-survey-subject',
@@ -14,23 +10,20 @@ import { SurveyHttpService } from '../../services/survey-http.service';
   styleUrls: ['./survey-subject.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class SurveySubjectComponent implements OnDestroy {
+export class SurveySubjectComponent {
   @Input() surveySubjects: SurveySubject[];
   @Output() onSaveSurvey = new EventEmitter<Score[]>();
-  private readonly destroy$ = new Subject<void>();
   surveySubjectSequence = 0;
   questionSequence = 0;
   selectedAnswer: any;
+  labelBack = 'Vorige';
   labelNext = 'Volgende';
   labelSubmit = 'Bevestig';
   score = 0;
   scores: Score[] = [];
 
-  constructor(private readonly router: Router, private readonly surveyHttpService: SurveyHttpService) {}
-
-  ngOnDestroy() {
-    this.destroy$.next();
-    this.destroy$.complete();
+  get previousQuestionAvailable(): boolean {
+    return !(this.questionSequence === 0 && this.surveySubjectSequence === 0);
   }
 
   get nextQuestionAvailable(): boolean {
@@ -48,21 +41,79 @@ export class SurveySubjectComponent implements OnDestroy {
   }
 
   onNext(surveySubject: SurveySubject, question: Question): void {
-    this.scores.push({
-      value: this.score,
-      surveySubject: surveySubject,
-      question: question,
-    });
-    this.score = 0;
+    let score = this.findScore(
+      this.surveySubjects[this.surveySubjectSequence],
+      this.surveySubjects[this.surveySubjectSequence].questions[this.questionSequence],
+    );
+    if (!score) {
+      this.scores.push({
+        value: this.score,
+        surveySubject: surveySubject,
+        question: question,
+      });
+    } else {
+      score.value = this.score;
+    }
     if (this.nextQuestionAvailable) {
       this.questionSequence++;
+      this.score = this.findScoreValue(
+        this.surveySubjects[this.surveySubjectSequence],
+        this.surveySubjects[this.surveySubjectSequence].questions[this.questionSequence],
+      );
       return;
     }
     if (this.nextSurveySubjectAvailable) {
       this.surveySubjectSequence++;
       this.questionSequence = 0;
+      this.score = this.findScoreValue(
+        this.surveySubjects[this.surveySubjectSequence],
+        this.surveySubjects[this.surveySubjectSequence].questions[this.questionSequence],
+      );
     } else {
       this.onSaveSurvey.next(this.scores);
     }
+  }
+
+  onBack(): void {
+    if (!this.previousQuestionAvailable) {
+      return;
+    }
+    if (this.questionSequence === 0 && this.surveySubjectSequence !== 0) {
+      this.surveySubjectSequence--;
+      this.questionSequence = this.surveySubjects[this.surveySubjectSequence].questions.length - 1;
+    } else {
+      this.questionSequence--;
+    }
+    let scoreValue = this.findScoreValue(
+      this.surveySubjects[this.surveySubjectSequence],
+      this.surveySubjects[this.surveySubjectSequence].questions[this.questionSequence],
+    );
+    if (!scoreValue) {
+      this.score = 0;
+    } else {
+      this.score = scoreValue;
+    }
+  }
+
+  private findScoreValue(surveySubject: SurveySubject, question: Question): number | undefined {
+    if (!surveySubject || !question || !this.scores) {
+      return undefined;
+    }
+    let score = this.scores.find(
+      (s: Score) => s.surveySubject.id === surveySubject.id && s.question.id === question.id,
+    );
+    if (!score) {
+      return undefined;
+    }
+    return score.value;
+  }
+
+  private findScore(surveySubject: SurveySubject, question: Question): Score | undefined {
+    if (!surveySubject || !question || !this.scores) {
+      return undefined;
+    }
+    return this.scores.find(
+      (score: Score) => score.surveySubject.id === surveySubject.id && score.question.id === question.id,
+    );
   }
 }

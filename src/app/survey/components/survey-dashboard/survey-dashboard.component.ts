@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, EventEmitter, Input, Output } from '@angular/core';
+
+import { Survey } from '../../models/survey.model';
 
 @Component({
   selector: 'app-survey-dashboard',
@@ -7,5 +9,13 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SurveyDashboardComponent {
+  @Input() title: string;
   @Input() data: any;
+  @Input() surveys: Survey[];
+  @Output() refreshSurveysRequested = new EventEmitter<void>();
+  label = 'Refresh';
+
+  onRefreshSurveys(): void {
+    this.refreshSurveysRequested.emit();
+  }
 }

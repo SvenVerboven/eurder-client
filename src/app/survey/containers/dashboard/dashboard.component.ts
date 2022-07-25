@@ -1,11 +1,12 @@
-import { BehaviorSubject, catchError, EMPTY, map, Observable, tap } from 'rxjs';
+import { BehaviorSubject, catchError, EMPTY, map, Observable, Subject, switchMap, tap } from 'rxjs';
 
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+
+import { MessageService } from 'primeng/api';
 
 import { SurveyHttpService } from '../../services/survey-http.service';
 import { Survey } from '../../models/survey.model';
 import { mapToDoughnutData } from '../../utils/survey-mapper';
-import { MessageService } from 'primeng/api';
 
 @Component({
   selector: 'app-dashboard',
@@ -14,26 +15,35 @@ import { MessageService } from 'primeng/api';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DashboardComponent implements OnInit {
+  private readonly refreshDashboardAction = new Subject<void>();
   loading$ = new BehaviorSubject<boolean>(false);
   surveys$: Observable<Survey[]>;
+  data$: Observable<any>;
   data: any = {};
   title = 'Algemene score';
 
   constructor(private readonly surveyHttpService: SurveyHttpService, private readonly messageService: MessageService) {}
 
   ngOnInit(): void {
-    this.loading$.next(true);
     this.surveys$ = this.surveyHttpService.findAll().pipe(
-      map((response: Survey[]) => mapToDoughnutData(response)),
-      tap((mappeData: any) => {
-        this.loading$.next(false);
-        this.data = mappeData;
-      }),
       catchError(() => {
         this.handleError();
         return EMPTY;
       }),
     );
+    this.refreshDashboardAction
+      .pipe(
+        tap(() => this.loading$.next(true)),
+        switchMap(() => this.surveys$),
+        map((response: Survey[]) => mapToDoughnutData(response)),
+        tap((mappedValue: any) => {
+          console.log(mappedValue);
+          this.loading$.next(false);
+          this.data = mappedValue;
+        }),
+      )
+      .subscribe();
+    this.refreshDashboardAction.next();
   }
 
   private handleError(): void {
@@ -43,5 +53,9 @@ export class DashboardComponent implements OnInit {
       severity: 'error',
       summary: 'Oeps er ging iets verkeerd, neem contact op met Sven.',
     });
+  }
+
+  onRefreshSurveysRequested($event: void) {
+    this.refreshDashboardAction.next();
   }
 }

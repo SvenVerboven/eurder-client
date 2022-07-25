@@ -1,6 +1,19 @@
 import { Survey } from '../models/survey.model';
 import { Score } from '../models/score.model';
 
+const DEFAULT_COLORS = [
+  '#ec4899',
+  '#eab308',
+  '#06b6d4',
+  '#ff3d32',
+  '#14b8a6',
+  '#3b82f6',
+  '#22c55e',
+  '#6366f1',
+  '#f97316',
+  '#a855f7',
+];
+
 export function mapToDoughnutData(surveys: Survey[]): any {
   if (!surveys) {
     return {};
@@ -23,16 +36,21 @@ export function mapToDoughnutData(surveys: Survey[]): any {
     });
   });
   console.log(doughnutDataMap);
+  let colorArray = getColorArray(doughnutDataMap);
   let any = {
     labels: Array.from(doughnutDataMap.keys()),
     datasets: [
       {
         data: Array.from(doughnutDataMap.values()),
-        backgroundColor: ['#FF6384', '#36A2EB'],
-        hoverBackgroundColor: ['#FF6384', '#36A2EB'],
+        backgroundColor: colorArray,
+        hoverBackgroundColor: colorArray,
       },
     ],
   };
   console.log(any);
   return any;
+}
+
+function getColorArray(map: Map<string, number>): string[] {
+  return DEFAULT_COLORS.slice(0, map.size);
 }
