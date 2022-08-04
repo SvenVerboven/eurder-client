@@ -65,7 +65,7 @@ export class SurveyComponent implements OnInit, OnDestroy {
     );
     this.surveySubjects$ = this.findSurveySubjectsAction$.pipe(
       switchMap(() =>
-        this.surveySubjectHttpService.findSurveySubjects().pipe(
+        this.surveySubjectHttpService.findAll().pipe(
           catchError(() => {
             this.handleError();
             return EMPTY;

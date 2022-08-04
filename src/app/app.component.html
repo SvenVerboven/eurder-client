@@ -1,5 +1,7 @@
-<app-header [title]="title"></app-header>
-<div class="error-message-container">
-  <p-messages></p-messages>
+<app-header class="sticky-header"></app-header>
+<div class="content">
+  <div class="error-message-container">
+    <p-messages></p-messages>
+  </div>
+  <router-outlet></router-outlet>
 </div>
-<router-outlet></router-outlet>

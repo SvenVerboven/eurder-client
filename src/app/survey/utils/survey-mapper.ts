@@ -22,20 +22,14 @@ export function mapToDoughnutData(surveys: Survey[]): any {
   surveys.forEach((survey: Survey) => {
     survey.scores.forEach((score: Score) => {
       let surveySubjectName = score.surveySubject.name;
-      console.log(surveySubjectName);
       let scoreValue = score.value;
-      console.log(scoreValue);
       if (doughnutDataMap.has(surveySubjectName)) {
-        console.log('key exists');
         doughnutDataMap.set(surveySubjectName, doughnutDataMap.get(surveySubjectName) + scoreValue);
-        console.log(`new value: ${doughnutDataMap.get(surveySubjectName)}`);
       } else {
-        console.log('key does not exist');
         doughnutDataMap.set(surveySubjectName, scoreValue);
       }
     });
   });
-  console.log(doughnutDataMap);
   let colorArray = getColorArray(doughnutDataMap);
   let any = {
     labels: Array.from(doughnutDataMap.keys()),
@@ -47,7 +41,6 @@ export function mapToDoughnutData(surveys: Survey[]): any {
       },
     ],
   };
-  console.log(any);
   return any;
 }
 

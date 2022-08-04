@@ -1,0 +1,38 @@
+<div class="survey-subject-table-container">
+  <p-table [value]="surveySubjects" responsiveLayout="scroll" styleClass="p-datatable-sm">
+    <ng-template pTemplate="caption">
+      <div class="caption-container">
+        <h3>Survey subjects</h3>
+        <button pButton type="button" icon="pi pi-refresh" iconPos="left" (click)="onRefresh.emit()"></button>
+      </div>
+    </ng-template>
+    <ng-template pTemplate="header">
+      <tr>
+        <th>Naam</th>
+        <th>Sequence</th>
+        <th></th>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-surveySubject>
+      <tr>
+        <td>{{ surveySubject.name }}</td>
+        <td>{{ surveySubject.sequence }}</td>
+        <td class="button-column">
+          <button
+            pButton
+            type="button"
+            icon="pi pi-trash"
+            iconPos="left"
+            class="p-button-danger"
+            (click)="onDelete.emit(surveySubject)"
+          ></button>
+        </td>
+      </tr>
+    </ng-template>
+    <ng-template pTemplate="summary">
+      <div>
+        <button pButton type="button" iconPos="left" [label]="labelCreate" class="p-button-success" (click)="onSave.emit()"></button>
+      </div>
+    </ng-template>
+  </p-table>
+</div>

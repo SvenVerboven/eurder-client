@@ -1,4 +1,4 @@
-<div *ngIf="surveySubjects" class="container">
+<div *ngIf="surveySubjects.length > 0; else noSurveySubjectsAvailable" class="container">
   <p-card header="U proeft nu {{ surveySubjects[surveySubjectSequence].name }}">
     <h3>
       {{ surveySubjects[surveySubjectSequence].questions[questionSequence].text }}
@@ -34,3 +34,6 @@
     </div>
   </p-card>
 </div>
+<ng-template #noSurveySubjectsAvailable>
+  <div class="no-survey-subjects-available-container">Er valt niets te proeven 😭</div>
+</ng-template>

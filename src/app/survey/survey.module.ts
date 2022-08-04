@@ -22,6 +22,11 @@ import { ChartModule } from 'primeng/chart';
 import { TitleComponent } from './components/title/title.component';
 import { DialogModule } from 'primeng/dialog';
 import { ConfirmDialogModule } from 'primeng/confirmdialog';
+import { PersonTableComponent } from './components/person-table/person-table.component';
+import { AdminComponent } from './containers/admin/admin.component';
+import { TableModule } from 'primeng/table';
+import { SurveyTableComponent } from './components/survey-table/survey-table.component';
+import { SurveySubjectTableComponent } from './components/survey-subject-table/survey-subject-table.component';
 
 @NgModule({
   declarations: [
@@ -33,6 +38,10 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
     SurveyDashboardComponent,
     TitleComponent,
     TitleComponent,
+    PersonTableComponent,
+    AdminComponent,
+    SurveyTableComponent,
+    SurveySubjectTableComponent,
   ],
   imports: [
     CommonModule,
@@ -50,6 +59,8 @@ import { ConfirmDialogModule } from 'primeng/confirmdialog';
     ChartModule,
     DialogModule,
     ConfirmDialogModule,
+    TableModule,
   ],
+  exports: [TitleComponent, PersonTableComponent],
 })
 export class SurveyModule {}

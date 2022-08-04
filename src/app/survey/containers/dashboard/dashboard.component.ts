@@ -15,7 +15,7 @@ import { mapToDoughnutData } from '../../utils/survey-mapper';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class DashboardComponent implements OnInit {
-  private readonly refreshDashboardAction = new Subject<void>();
+  private readonly refreshDashboardAction$ = new Subject<void>();
   loading$ = new BehaviorSubject<boolean>(false);
   surveys$: Observable<Survey[]>;
   data$: Observable<any>;
@@ -31,19 +31,18 @@ export class DashboardComponent implements OnInit {
         return EMPTY;
       }),
     );
-    this.refreshDashboardAction
+    this.refreshDashboardAction$
       .pipe(
         tap(() => this.loading$.next(true)),
         switchMap(() => this.surveys$),
         map((response: Survey[]) => mapToDoughnutData(response)),
         tap((mappedValue: any) => {
-          console.log(mappedValue);
           this.loading$.next(false);
           this.data = mappedValue;
         }),
       )
       .subscribe();
-    this.refreshDashboardAction.next();
+    this.refreshDashboardAction$.next();
   }
 
   private handleError(): void {
@@ -56,6 +55,6 @@ export class DashboardComponent implements OnInit {
   }
 
   onRefreshSurveysRequested($event: void) {
-    this.refreshDashboardAction.next();
+    this.refreshDashboardAction$.next();
   }
 }

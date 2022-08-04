@@ -1,5 +1,33 @@
-html, body {
+html,
+body {
   margin: 0;
   height: 100%;
-  overflow: hidden;
+}
+
+.sticky-header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.content {
+  padding-top: 3rem;
+}
+
+.button-column {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
+}
+
+.caption-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+  & h3 {
+    margin: 0;
+    padding: 0.75rem 0;
+  }
 }

@@ -1,0 +1,28 @@
+<app-title [title]="title"></app-title>
+<app-survey-table
+  [surveys]="surveys$ | async"
+  (onRefresh)="onRefreshSurveysRequested($event)"
+  (onDelete)="onDeleteSurveyRequested($event)"
+></app-survey-table>
+<app-survey-subject-table
+  [surveySubjects]="surveySubjects$ | async"
+  (onRefresh)="onRefreshSurveySubjectsRequested($event)"
+  (onDelete)="onDeleteSurveySubjectRequested($event)"
+  (onSave)="onSaveSurveySubjectRequested()"
+></app-survey-subject-table>
+<app-person-table
+  [persons]="persons$ | async"
+  (onRefresh)="onRefreshPersonsRequested($event)"
+  (onDelete)="onDeletePersonRequested($event)"
+></app-person-table>
+<p-confirmDialog class="dialog" #cd [style]="{width: '90vw'}">
+  <ng-template pTemplate="header">
+    <div class="dialog-header">Naam</div>
+    <input type="text" pInputText [(ngModel)]="value" />
+  </ng-template>
+  <ng-template pTemplate="footer">
+    <button type="button" pButton icon="pi pi-times" label="Nee" (click)="cd.reject()"></button>
+    <button type="button" pButton icon="pi pi-check" label="Ja" (click)="cd.accept()"></button>
+  </ng-template>
+</p-confirmDialog>
+<app-spinner *ngIf="loading$ | async as loading" [loading]="loading"></app-spinner>
