@@ -2,8 +2,9 @@
   <app-survey-dashboard
     [data]="data"
     [surveys]="surveys"
-    [title]="title"
-    (refreshSurveysRequested)="onRefreshSurveysRequested($event)"
+    (refreshSurveysRequested)="onRefreshSurveysRequested()"
+    (previousDoughnutRequested)="onPreviousDoughnutRequested($event)"
+    (nextDoughnutRequested)="onNextDoughnutRequested($event)"
   ></app-survey-dashboard>
 </div>
 <app-spinner *ngIf="loading$ | async as loading" [loading]="loading"></app-spinner>

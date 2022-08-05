@@ -76,24 +76,6 @@ export class AdminComponent implements OnInit, OnDestroy {
       ),
       tap(() => this.loading$.next(false)),
     );
-    this.saveSurveySubjectAction$
-      .pipe(
-        takeUntil(this.destroy$),
-        tap(() => this.loading$.next(true)),
-        switchMap((surveySubject: SurveySubject) =>
-          this.surveySubjectHttpService.save(surveySubject).pipe(
-            catchError(() => {
-              this.handleError();
-              return EMPTY;
-            }),
-          ),
-        ),
-        tap(() => {
-          this.loading$.next(false);
-          this.onRefreshSurveySubjectsRequested();
-        }),
-      )
-      .subscribe();
   }
 
   ngOnDestroy(): void {
@@ -145,6 +127,24 @@ export class AdminComponent implements OnInit, OnDestroy {
         tap(() => this.loading$.next(true)),
         switchMap((id: number) =>
           this.surveySubjectHttpService.deleteById(id).pipe(
+            catchError(() => {
+              this.handleError();
+              return EMPTY;
+            }),
+          ),
+        ),
+        tap(() => {
+          this.loading$.next(false);
+          this.onRefreshSurveySubjectsRequested();
+        }),
+      )
+      .subscribe();
+    this.saveSurveySubjectAction$
+      .pipe(
+        takeUntil(this.destroy$),
+        tap(() => this.loading$.next(true)),
+        switchMap((surveySubject: SurveySubject) =>
+          this.surveySubjectHttpService.save(surveySubject).pipe(
             catchError(() => {
               this.handleError();
               return EMPTY;

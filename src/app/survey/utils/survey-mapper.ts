@@ -14,24 +14,40 @@ const DEFAULT_COLORS = [
   '#a855f7',
 ];
 
-export function mapToDoughnutData(surveys: Survey[]): any {
+export function mapToDoughnutData(surveys: Survey[], index: number = 0): any {
   if (!surveys) {
     return {};
   }
   let doughnutDataMap = new Map<string, number>();
-  surveys.forEach((survey: Survey) => {
-    survey.scores.forEach((score: Score) => {
-      let surveySubjectName = score.surveySubject.name;
-      let scoreValue = score.value;
-      if (doughnutDataMap.has(surveySubjectName)) {
-        doughnutDataMap.set(surveySubjectName, doughnutDataMap.get(surveySubjectName) + scoreValue);
-      } else {
-        doughnutDataMap.set(surveySubjectName, scoreValue);
-      }
+  if (index === 0) {
+    surveys.forEach((survey: Survey) => {
+      survey.scores.forEach((score: Score) => {
+        let surveySubjectName = score.surveySubject.name;
+        let scoreValue = score.value;
+        if (doughnutDataMap.has(surveySubjectName)) {
+          doughnutDataMap.set(surveySubjectName, doughnutDataMap.get(surveySubjectName) + scoreValue);
+        } else {
+          doughnutDataMap.set(surveySubjectName, scoreValue);
+        }
+      });
     });
-  });
+  } else {
+    surveys.forEach((survey: Survey) => {
+      survey.scores
+        .filter((score: Score) => score.question.id === index)
+        .forEach((score: Score) => {
+          let surveySubjectName = score.surveySubject.name;
+          let scoreValue = score.value;
+          if (doughnutDataMap.has(surveySubjectName)) {
+            doughnutDataMap.set(surveySubjectName, doughnutDataMap.get(surveySubjectName) + scoreValue);
+          } else {
+            doughnutDataMap.set(surveySubjectName, scoreValue);
+          }
+        });
+    });
+  }
   let colorArray = getColorArray(doughnutDataMap);
-  let any = {
+  return {
     labels: Array.from(doughnutDataMap.keys()),
     datasets: [
       {
@@ -41,7 +57,6 @@ export function mapToDoughnutData(surveys: Survey[]): any {
       },
     ],
   };
-  return any;
 }
 
 function getColorArray(map: Map<string, number>): string[] {

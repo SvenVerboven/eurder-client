@@ -1,6 +1,26 @@
-<app-title [title]="title"></app-title>
-<p-chart type="doughnut" [data]="data"></p-chart>
-<p-divider></p-divider>
-<div>Totaal aantal enquetes ingediend: {{ surveys.length }}</div>
-<p-divider></p-divider>
-<button pButton icon="pi pi-refresh" [label]="label" (click)="onRefreshSurveys()"></button>
+<div *ngIf="surveys.length > 0; else noSurveysAvailable">
+  <app-title [title]="title"></app-title>
+  <p-chart type="doughnut" [data]="data"></p-chart>
+  <p-divider></p-divider>
+  <div>Totaal aantal enquetes ingediend: {{ surveys.length }}</div>
+  <div>Ingediend door: {{ getPersons() }}</div>
+  <p-divider></p-divider>
+</div>
+<ng-template #noSurveysAvailable>
+  <div class="no-survey-subjects-available-container">Er zijn geen enquetes ingediend 🥺</div>
+</ng-template>
+<div class="button-container">
+  <button pButton icon="pi pi-refresh" [label]="label" (click)="onRefreshSurveysRequested()"></button>
+  <button
+    pButton
+    [icon]="index === 0 ? 'pi pi-ban' : 'pi pi-step-backward'"
+    [disabled]="index === 0"
+    (click)="onPreviousDoughnutRequested()"
+  ></button>
+  <button
+    pButton
+    [icon]="index === surveys[0]?.scores[0]?.surveySubject?.questions?.length ? 'pi pi-ban' : 'pi pi-step-forward'"
+    [disabled]="index === surveys[0]?.scores[0]?.surveySubject?.questions?.length"
+    (click)="onNextDoughnutRequested()"
+  ></button>
+</div>
