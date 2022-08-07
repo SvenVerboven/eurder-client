@@ -22,7 +22,7 @@ export class SurveyDashboardComponent {
     if (this.index === 0) {
       return 'algemene score';
     } else {
-      return this.trimTitle(surveys[0]?.scores[0]?.surveySubject?.questions[this.index - 1].text);
+      return `Resultaat: ${this.trimTitle(surveys[0]?.scores[0]?.surveySubject?.questions[this.index - 1].text)}`;
     }
   }
 
